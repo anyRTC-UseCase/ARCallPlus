@@ -51,12 +51,14 @@ android {
     buildTypes {
         debug {
             buildConfigField 'String', 'APP_ID', '' // APP ID
+			buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [RELEASE_TIME:releaseTime()]
         }
         release {
             minifyEnabled false
             buildConfigField 'String', 'APP_ID', '' // APP ID
+			buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [RELEASE_TIME:releaseTime()]
         }
