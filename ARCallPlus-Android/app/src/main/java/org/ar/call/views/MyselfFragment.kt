@@ -1,20 +1,14 @@
 package org.ar.call.views
 
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import org.ar.call.BuildConfig
 import org.ar.call.R
 import org.ar.call.databinding.FragmentMyselfBinding
 import org.ar.call.model.UserModel
 import org.ar.rtc.RtcEngine
-import java.lang.NullPointerException
 
 class MyselfFragment : BaseFragment() {
 
@@ -52,10 +46,7 @@ class MyselfFragment : BaseFragment() {
 
     binding.tvSdkVersion.text = String.format("%s", "v ${RtcEngine.getSdkVersion()}")
     binding.tvAppVersion.text = String.format("%s", "v ${BuildConfig.VERSION_NAME}")
-    binding.tvPubTime.text = activity?.packageManager?.getApplicationInfo(
-      BuildConfig.APPLICATION_ID,
-      PackageManager.GET_META_DATA
-    )!!.metaData["releaseTime"].toString()
+    binding.tvPubTime.text = BuildConfig.releaseDate
   }
 
   private fun openWithBrowser(url: String) {
