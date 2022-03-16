@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/calling_color_audiocall_background">
+
+    <io.anyrtc.aruicall.view.RoundCornerImageView
+        android:id="@+id/img_audio_head"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="98dp"
+        android:scaleType="centerCrop"
+        app:radius="15dp"
+        android:src="@drawable/aruicalling_ic_avatar">
+    </io.anyrtc.aruicall.view.RoundCornerImageView>
+
+    <TextView
+        android:id="@+id/tv_audio_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_audio_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:text="UserName"
+        android:textAlignment="center"
+        android:textColor="@color/calling_color_black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_btns"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/calling_color_main"
+        android:textSize="@dimen/rtccalling_text_size_middle"
+        android:textStyle="bold"
+        tools:text="@string/rtccalling_call_time_default" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_audio_mute"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="麦克风"
+            android:drawablePadding="16dp"
+            android:background="@null"
+            android:textColor="@color/calling_color_second"
+            android:drawableTop="@drawable/selector_audio_manager"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:id="@+id/btn_hang_up"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="挂断"
+            android:drawablePadding="16dp"
+            android:textColor="@color/calling_color_second"
+            android:drawableTop="@drawable/aruicalling_ic_hangup"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:id="@+id/btn_audio_speak"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="扬声器"
+            android:drawablePadding="16dp"
+            android:background="@null"
+            android:textColor="@color/calling_color_second"
+            android:drawableTop="@drawable/selector_voice"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

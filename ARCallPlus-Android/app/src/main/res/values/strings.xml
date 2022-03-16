@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">ARCallPlus</string>
+    <string name="introduce">anyRTC实时音频</string>
+    <string name="pleaseInputThePhoneNumber">请输入手机号</string>
+    <string name="confirm">确认</string>
+    <string name="settingInformation">完善信息</string>
+    <string name="replacement">更换</string>
+    <string name="nickname">昵称</string>
+    <string name="pleaseInputTheNickname">请输入昵称</string>
+    <string name="dice">🎲</string>
+    <string name="complete">完成</string>
+    <string name="settingAvatar">设置头像</string>
+    <string name="phoneNumber">手机号</string>
+    <string name="communication">通信</string>
+    <string name="me">我的</string>
+    <string name="company">anyRTC</string>
+    <string name="peerByPeerAudio">点对点音频呼叫</string>
+    <string name="peerAudioIntroduction">全频带音质，打造CD级音频通话盛宴</string>
+    <string name="groupAudio">多人语音呼叫</string>
+    <string name="peerByPeerVideo">点对点视频呼叫</string>
+    <string name="peerVideoIntroduction">简单3步即可拥有音视频呼叫通话功能</string>
+    <string name="myself">我的</string>
+    <string name="name">名字</string>
+    <string name="privacyPolicy">隐私条例</string>
+    <string name="createAccount">注册 anyRTC 帐号</string>
+    <string name="releaseDate">发版时间</string>
+    <string name="_2020_2_2">2020-2-2</string>
+    <string name="sdkVersion">SDK 版本</string>
+    <string name="softwareVersion">软件版本</string>
+    <string name="softwareVersionCode">1.0.0</string>
+    <string name="disclaimer">免责声明</string>
+    <string name="edit">edit</string>
+    <string name="createCall">发起呼叫</string>
+    <string name="added">添加</string>
+    <string name="searchingThePhoneNumber">搜索手机号</string>
+    <string name="recentContact">最近联系人</string>
+    <string name="makingCall">发起呼叫</string>
+    <string name="searchingToContact">搜索已注册用户发起通话</string>
+    <string name="groupVideo">多人视频呼叫</string>
+    <string name="disclaimerContent">本产品是由anyRTC提供的一款体验产品，anyRTC享有本产品的著作权和所有权。特此免费授子获得本产品和相关文档文件（以下简称”软件”）副本的任何人无限制地使用软件的权利，包括但不限制试用，复制，修改，合并，发布，分发，但本产品不得用于商业用途，不得再许可和/或出售该软件的副本。
+\n\n
+本产品按“现状”提供，没有任何形式的明示担保包括但不限于对适配性、特定目的的适用性和非侵权性的担保。无论是由于与本产品或本产品的试用或其他方式有关的任何合同、侵权或其他形式的行为，anyRTC均不对任何索赔、损害或其他责任负责。
+\n\n
+您可以自由选择是否试用本产品提供的服务，如果您下载安装、试用本产品中所提供的服务，即表明您信任该产品所有人，anyRTC对任何原因在试用本产品中提供的服务时可能对您自身或他人造成的任何形式的损失和伤害不承担任何责任。</string>
+</resources>

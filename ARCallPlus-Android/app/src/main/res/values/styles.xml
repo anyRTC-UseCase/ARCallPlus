@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialLoadingProgress">
+        <attr name="loadingProgress_circleRadius" format="dimension" />
+        <attr name="loadingProgress_cardPadding" format="dimension" />
+        <attr name="loadingProgress_strokeWidth" format="dimension" />
+        <attr name="loadingProgress_strokeColor" format="color" />
+        <attr name="loadingProgress_text" format="string" />
+    </declare-styleable>
+
+    <!--ShapeableImageView 圆 -->
+    <style name="CircleStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

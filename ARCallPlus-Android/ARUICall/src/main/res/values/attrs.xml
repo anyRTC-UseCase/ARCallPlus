@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <declare-styleable name="SeparatedEditText">
+        <attr name="password" format="boolean" />
+        <attr name="showCursor" format="boolean" />
+        <attr name="highLightEnable" format="boolean" />
+        <attr name="highLightBefore" format="boolean" />
+        <attr name="separateType" format="reference|integer" />
+        <attr name="maxLength" format="integer" />
+        <attr name="corner" format="dimension" />
+        <attr name="borderColor" format="color|reference" />
+        <attr name="blockColor" format="color|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="highlightColor" format="color|reference" />
+        <attr name="highlightStyle" format="reference|integer" />
+        <attr name="blockSpacing" format="dimension" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="showKeyboard" format="boolean" />
+        <attr name="errorColor" format="color|reference" />
+    </declare-styleable>
+
+    <integer name="type_hollow">1</integer>
+
+    <declare-styleable name="RTCCallingRoundCornerImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+    </declare-styleable>
+
+</resources>

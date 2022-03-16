@@ -1,0 +1,7 @@
+<resources>
+    <string name="rtccalling_call_time_default">"00:01"</string>
+    <string name="rtccalling_contact_default_name">test 123</string>
+    <string name="rtccalling_invite_video_call">Invites you to a video call…</string>
+    <string name="rtccalling_called_time_format">%02d:%02d</string>
+    <string name="rtccalling_waiting_be_accepted">Waiting for the user to accept…</string>
+</resources>

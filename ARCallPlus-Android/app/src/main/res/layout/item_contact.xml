@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avatar_parent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:src="@drawable/searching" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#FF5A5A66"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/phone_number"
+        app:layout_constraintLeft_toRightOf="@id/avatar_parent"
+        app:layout_constraintTop_toTopOf="@id/avatar_parent"
+        tools:text="Json" />
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="#FF5A5A66"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_parent"
+        app:layout_constraintLeft_toLeftOf="@id/nickname"
+        app:layout_constraintTop_toBottomOf="@id/nickname"
+        tools:text="13888888888" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/selected"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/selector_unchecked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/item_decoration"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFEBEBF3"
+        app:layout_constraintTop_toBottomOf="@id/avatar_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home_bg" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/company"
+                android:textColor="#FF18191D"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/peer_by_peer_audio"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/shape_home_item_bg"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/peer_audio_icon"
+                android:layout_width="52dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="34dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/peer_by_peer_audio"
+                app:layout_constraintBottom_toBottomOf="@id/peer_by_peer_audio"
+                app:layout_constraintLeft_toLeftOf="@id/peer_by_peer_audio"
+                app:layout_constraintTop_toTopOf="@id/peer_by_peer_audio" />
+
+            <TextView
+                android:id="@+id/peer_audio_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/peerByPeerAudio"
+                android:textColor="#FF18191D"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/peer_audio_introduction"
+                app:layout_constraintLeft_toRightOf="@id/peer_audio_icon"
+                app:layout_constraintTop_toTopOf="@id/peer_audio_icon" />
+
+            <TextView
+                android:id="@+id/peer_audio_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peerAudioIntroduction"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/peer_audio_icon"
+                app:layout_constraintLeft_toLeftOf="@id/peer_audio_title"
+                app:layout_constraintTop_toBottomOf="@id/peer_audio_title" />
+
+            <View
+                android:id="@+id/peer_by_peer_video"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_home_item_bg"
+                app:layout_constraintTop_toBottomOf="@id/peer_by_peer_audio" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/peer_video_icon"
+                android:layout_width="52dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="34dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/peer_by_peer_video"
+                app:layout_constraintBottom_toBottomOf="@id/peer_by_peer_video"
+                app:layout_constraintLeft_toLeftOf="@id/peer_by_peer_video"
+                app:layout_constraintTop_toTopOf="@id/peer_by_peer_video" />
+
+            <TextView
+                android:id="@+id/peer_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/peerByPeerVideo"
+                android:textColor="#FF18191D"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/peer_video_introduction"
+                app:layout_constraintLeft_toRightOf="@id/peer_video_icon"
+                app:layout_constraintTop_toTopOf="@id/peer_video_icon" />
+
+            <TextView
+                android:id="@+id/peer_video_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peerVideoIntroduction"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/peer_video_icon"
+                app:layout_constraintLeft_toLeftOf="@id/peer_video_title"
+                app:layout_constraintTop_toBottomOf="@id/peer_video_title" />
+
+            <View
+                android:id="@+id/group_audio"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_home_item_bg"
+                app:layout_constraintTop_toBottomOf="@id/peer_by_peer_video" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/group_audio_icon"
+                android:layout_width="52dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="34dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group_audio"
+                app:layout_constraintBottom_toBottomOf="@id/group_audio"
+                app:layout_constraintLeft_toLeftOf="@id/group_audio"
+                app:layout_constraintTop_toTopOf="@id/group_audio" />
+
+            <TextView
+                android:id="@+id/group_audio_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/groupAudio"
+                android:textColor="#FF18191D"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/group_audio_introduction"
+                app:layout_constraintLeft_toRightOf="@id/group_audio_icon"
+                app:layout_constraintTop_toTopOf="@id/group_audio_icon" />
+
+            <TextView
+                android:id="@+id/group_audio_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peerAudioIntroduction"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/group_audio_icon"
+                app:layout_constraintLeft_toLeftOf="@id/group_audio_title"
+                app:layout_constraintTop_toBottomOf="@id/group_audio_title" />
+
+            <View
+                android:id="@+id/group_video"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_home_item_bg"
+                app:layout_constraintTop_toBottomOf="@id/group_audio" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/group_video_icon"
+                android:layout_width="52dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="34dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/group_video"
+                app:layout_constraintBottom_toBottomOf="@id/group_video"
+                app:layout_constraintLeft_toLeftOf="@id/group_video"
+                app:layout_constraintTop_toTopOf="@id/group_video" />
+
+            <TextView
+                android:id="@+id/group_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/groupVideo"
+                android:textColor="#FF18191D"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/group_video_introduction"
+                app:layout_constraintLeft_toRightOf="@id/group_video_icon"
+                app:layout_constraintTop_toTopOf="@id/group_video_icon" />
+
+            <TextView
+                android:id="@+id/group_video_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peerAudioIntroduction"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/group_video_icon"
+                app:layout_constraintLeft_toLeftOf="@id/group_video_title"
+                app:layout_constraintTop_toBottomOf="@id/group_video_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

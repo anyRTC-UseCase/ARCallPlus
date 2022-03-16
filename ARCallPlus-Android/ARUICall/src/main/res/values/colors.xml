@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#40A3FC</color>
+    <color name="colorPrimaryDark">#40A3FC</color>
+    <color name="colorAccent">#40A3FC</color>
+
+    <color name="calling_color_white">#FFFFFFFF</color>
+    <color name="calling_color_black">#000000</color>
+    <color name="calling_color_background">#FF444444</color>
+    <color name="calling_color_main">#333333</color>
+    <color name="calling_color_second">#666666</color>
+    <color name="calling_color_gray">#FF999999</color>
+    <color name="calling_color_audiocall_background">#FFF1F2F8</color>
+    <color name="calling_color_videocall_background">#FF55534F</color>
+</resources>

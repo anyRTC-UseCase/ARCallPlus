@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calling_color_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <FrameLayout
+        android:id="@+id/fl_head"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:src="@drawable/aruicalling_ic_avatar"></ImageView>
+
+        <TextView
+            android:id="@+id/tv_caller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_margin="6dp"
+            android:textColor="@color/white"
+            android:text="UserName">
+        </TextView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="邀请您进行视频通话..."
+        android:textColor="@color/white"
+        android:textSize="12sp"></TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_remote_user"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/tv_state"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_hang_up"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="挂断"
+            android:drawablePadding="16dp"
+            android:textColor="@color/calling_color_second"
+            android:drawableTop="@drawable/aruicalling_img_hang_up"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="接听"
+            android:drawablePadding="16dp"
+            android:textColor="@color/calling_color_second"
+            android:drawableTop="@drawable/aruicalling_img_accept"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+</RelativeLayout>

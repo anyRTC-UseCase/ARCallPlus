@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calling_color_videocall_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <io.anyrtc.aruicall.view.ARTCVideoLayoutManager
+        android:id="@+id/ar_video_manager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </io.anyrtc.aruicall.view.ARTCVideoLayoutManager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/aruicalling_ic_switch_camera"
+            android:textColor="@color/white"></ImageButton>
+
+
+        <LinearLayout
+            android:id="@+id/ll_video_btn_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_hang_up"
+                android:layout_width="64dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="挂断"
+                android:drawablePadding="16dp"
+                android:textColor="@color/calling_color_white"
+                android:drawableTop="@drawable/aruicalling_img_hang_up"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_video_btn_b"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_above="@+id/ll_video_btn_c"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_audio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="13dp"
+                android:drawableTop="@drawable/selector_audio_manager"
+                android:text="静音"
+                android:textColor="@color/white"></Button>
+
+            <Button
+                android:id="@+id/btn_speak"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="13dp"
+                android:text="免提"
+                android:textColor="@color/white"
+                android:drawableTop="@drawable/selector_voice"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+
+
+            <Button
+                android:id="@+id/btn_video"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:textColor="@color/white"
+                android:text="视频"
+                android:drawablePadding="13dp"
+                android:drawableTop="@drawable/selector_video_manager"
+                android:layout_height="wrap_content">
+            </Button>
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_switch_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_video_btn_b"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:drawableTop="@drawable/aruicalling_ic_switch_to_audio_call"
+            android:text="切到语音通话"
+            android:textColor="@color/calling_color_white"></Button>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_switch_audio"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="0:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/rtccalling_text_size_middle" />
+
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>
