@@ -219,6 +219,8 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
                 globalVM.curCallModel?.let {
                     bindingAudioWait.run {
                         tvAwName.text = userName
+                        bindingAudio.tvAudioName.text = if (it.users[0].userName.isNullOrEmpty()) it.users[0].userId else it.users[0].userName
+                        ImageLoader.loadImage(context,bindingAudio.imgAudioHead,headerUrl)
                         ImageLoader.loadImage(context,imgAwHead,headerUrl)
                         if (role == ARUICalling.Role.CALL){
                             globalVM.startCallRing()
@@ -335,7 +337,12 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
     private fun showAudioModel(){
         rootView.removeView(bindingVideo.root)
         rootView.addView(bindingAudio.root)
-        bindingAudio.tvAudioName.text = remoteUserId
+        globalVM.curCallModel?.let {
+            bindingAudio.tvAudioName.text = if (it.users[0].userName.isNullOrEmpty()) it.users[0].userId else it.users[0].userName
+            ImageLoader.loadImage(context,bindingAudio.imgAudioHead,it.users[0].headerUrl)
+        }
+
+
         rtcVM.disableVideo()
         bindingVideo.btnSpeak.isSelected = false
         rtcVM.setEnableSpeakerphone(false)
@@ -388,7 +395,10 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
         globalVM.isCalling = true
             if (globalVM.curCallModel?.type ==ARUICalling.Type.AUDIO) {
                 bindingAudio.run {
-                   tvAudioName.text = remoteUserId
+                    globalVM.curCallModel?.let {
+                       tvAudioName.text = if (it.users[0].userName.isNullOrEmpty()) it.users[0].userId else it.users[0].userName
+                        ImageLoader.loadImage(context,imgAudioHead,it.users[0].headerUrl)
+                    }
                 }
                 Toast.makeText(context, "声音将通过听筒播放", Toast.LENGTH_SHORT).show()
                 bindingVideo.btnSpeak.isSelected = false
