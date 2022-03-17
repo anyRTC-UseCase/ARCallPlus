@@ -2,10 +2,13 @@
 <resources>
     <declare-styleable name="MaterialLoadingProgress">
         <attr name="loadingProgress_circleRadius" format="dimension" />
+        <attr name="loadingProgress_cardColor" format="color" />
         <attr name="loadingProgress_cardPadding" format="dimension" />
         <attr name="loadingProgress_strokeWidth" format="dimension" />
         <attr name="loadingProgress_strokeColor" format="color" />
         <attr name="loadingProgress_text" format="string" />
+        <attr name="loadingProgress_textSize" format="dimension" />
+        <attr name="loadingProgress_textColor" format="color" />
     </declare-styleable>
 
     <!--ShapeableImageView 圆 -->

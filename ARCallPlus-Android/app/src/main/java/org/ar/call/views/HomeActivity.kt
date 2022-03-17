@@ -2,11 +2,10 @@ package org.ar.call.views
 
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.AnimationDrawable
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -38,55 +37,65 @@ class HomeActivity : BaseActivity() {
   }
 
   private fun initCore() {
+    showLoading()
     val userModel = UserModel()
     userModel.queryDB {
       val selfInfo = userModel.selfInfo!!
       ARUILogin.init(this, BuildConfig.APP_ID)
       ARUILogin.login(ARCallUser(selfInfo.phoneNumber, selfInfo.nickname, selfInfo.avatar), object : org.ar.rtm.ResultCallback<Void> {
         override fun onSuccess(var1: Void?) {
-          Log.e("::", "login success")
+          ARUICalling.getInstance(this@HomeActivity) {
+            userModel.removeSelf()
+            startActivity(Intent(this@HomeActivity, LoginActivity::class.java).also { a ->
+              a.putExtra("anotherLogin", true)
+            })
+            finish()
+          }
+          httpInit(selfInfo)
         }
 
         override fun onFailure(var1: ErrorInfo?) {
-          Log.e("::", "login failed, Description: ${var1?.errorDescription}, errorCode: ${var1?.errorCode}")
-        }
-      })
-      ARUICalling.getInstance(this) {
-        userModel.removeSelf()
-        startActivity(Intent(this, LoginActivity::class.java).also {
-          it.putExtra("anotherLogin", true)
-        })
-        finish()
-      }
-
-      HttpAPI().init(selfInfo.phoneNumber, selfInfo.avatar, selfInfo.nickname) { initSuccess ->
-        if (!initSuccess) {
-          Toast.makeText(this, "网络连接失败，请重试", Toast.LENGTH_LONG).show()
-          return@init
-        }
-      }
-      XGPushManager.registerPush(this, object : XGIOperateCallback {
-        override fun onSuccess(p0: Any?, p1: Int) {
-          Log.e("::", "registerPush success, $p0, $p1")
-          //XGPushManager.upsertAccounts(this@HomeActivity, selfInfo.phoneNumber)
-          XGPushManager.upsertAccounts(this@HomeActivity, mutableListOf(XGPushManager.AccountInfo(0, selfInfo.phoneNumber)), object : XGIOperateCallback {
-            override fun onSuccess(p0: Any?, p1: Int) {
-              Log.e("::", "register success, $p0, $p1")
-            }
-
-            override fun onFail(p0: Any?, p1: Int, p2: String?) {
-              Log.e("::", "register failed, $p0, $p1, $p2")
-            }
-          })
-        }
-
-        override fun onFail(p0: Any?, p1: Int, p2: String?) {
-          Log.e("::", "registerPush failed, $p0, $p1, $p2")
+          initCore()
         }
       })
     }
 
     checkNotification()
+  }
+
+  private fun httpInit(selfInfo: UserModel.UserInfo) {
+    HttpAPI().init(selfInfo.phoneNumber, selfInfo.avatar, selfInfo.nickname) { initSuccess ->
+      if (!initSuccess) {
+        httpInit(selfInfo)
+        return@init
+      }
+      initPush(selfInfo)
+    }
+  }
+
+  private fun initPush(selfInfo: UserModel.UserInfo) {
+    XGPushManager.registerPush(this@HomeActivity, object : XGIOperateCallback {
+      override fun onSuccess(p0: Any?, p1: Int) {
+        //XGPushManager.upsertAccounts(this@HomeActivity, selfInfo.phoneNumber)
+        setPushUser(selfInfo)
+      }
+
+      override fun onFail(p0: Any?, p1: Int, p2: String?) {
+        initPush(selfInfo)
+      }
+    })
+  }
+
+  private fun setPushUser(selfInfo: UserModel.UserInfo) {
+    XGPushManager.upsertAccounts(this@HomeActivity, mutableListOf(XGPushManager.AccountInfo(0, selfInfo.phoneNumber)), object : XGIOperateCallback {
+      override fun onSuccess(p0: Any?, p1: Int) {
+        runOnUiThread { dismissLoading() }
+      }
+
+      override fun onFail(p0: Any?, p1: Int, p2: String?) {
+        setPushUser(selfInfo)
+      }
+    })
   }
 
   private fun checkNotification() {
@@ -151,6 +160,16 @@ class HomeActivity : BaseActivity() {
 
   private fun replaceFragment(f: Fragment) {
     supportFragmentManager.beginTransaction().replace(R.id.fragment_parent, f).commit()
+  }
+
+  private fun showLoading() {
+    binding.loadingGroup.visibility = View.VISIBLE
+    (binding.loadingView.drawable as AnimationDrawable).start()
+  }
+
+  private fun dismissLoading() {
+    binding.loadingGroup.visibility = View.GONE
+    (binding.loadingView.drawable as AnimationDrawable).stop()
   }
 
   override fun onDestroy() {

@@ -27,18 +27,6 @@ android {
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        /*manifestPlaceholders = [
-                JPUSH_PKGNAME : applicationId,
-                JPUSH_APPKEY  : "3cd831f13abc5ff4080577f8",
-                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
-                XIAOMI_APPID  : "MI-2882303761518198144",
-                XIAOMI_APPKEY : "MI-5821819846144",
-                OPPO_APPKEY   : "OP-2d154b7b47424b97a475a18c7d342034",
-                OPPO_APPID    : "OP-30206493",
-                OPPO_APPSECRET: "OP-ff7aabae78024d21b512da535734a291",
-                VIVO_APPKEY   : "8dd62714846690d482d8978fa46bd611",
-                VIVO_APPID    : "102704859"
-        ]*/
 
         ndk {
             //可以根据需要来自行选择并添加对应cpu类型的.so库。
@@ -50,17 +38,15 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField 'String', 'APP_ID', '' // APP ID
-			buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
+            buildConfigField 'String', 'APP_ID', ''
+            buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [RELEASE_TIME:releaseTime()]
         }
         release {
             minifyEnabled false
-            buildConfigField 'String', 'APP_ID', '' // APP ID
-			buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
+            buildConfigField 'String', 'APP_ID', ''
+            buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [RELEASE_TIME:releaseTime()]
         }
     }
     compileOptions {

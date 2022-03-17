@@ -1,6 +1,7 @@
 package org.ar.call.model
 
 import android.annotation.SuppressLint
+import android.util.Log
 import org.ar.call.App
 import org.ar.call.tools.SQLDataHelper
 import java.lang.NullPointerException
@@ -92,18 +93,20 @@ class UserModel {
         return
       // maybe need to get the new thread
 
-      val writer = db.writableDatabase
-      writer.beginTransaction()
-      list.forEach {
-        if (it.id != null) {
-          writer.execSQL("UPDATE User_account SET Create_date=${it.createDate}, Phone_number='${it.phoneNumber}', Avatar='${it.avatar}', Nickname='${it.nickname}' WHERE Id=${it.id};")
-        } else {
-          writer.execSQL("INSERT INTO User_account (Create_date, Phone_number, Avatar, Nickname) VALUES(${it.id}, ${it.createDate}, '${it.phoneNumber}', '${it.avatar}', '${it.nickname}');")
+      Thread {
+        val writer = db.writableDatabase
+        writer.beginTransaction()
+        list.forEach {
+          if (it.id != null) {
+            writer.execSQL("UPDATE User_account SET Create_date=${it.createDate}, Phone_number='${it.phoneNumber}', Avatar='${it.avatar}', Nickname='${it.nickname}' WHERE Id=${it.id};")
+          } else {
+            writer.execSQL("INSERT INTO User_account (Create_date, Phone_number, Avatar, Nickname) VALUES(${it.createDate}, '${it.phoneNumber}', '${it.avatar}', '${it.nickname}');")
+          }
         }
-      }
-      writer.endTransaction()
-      writer.setTransactionSuccessful()
-      writer.close()
+        writer.setTransactionSuccessful()
+        writer.endTransaction()
+        writer.close()
+      }.start()
     }
   }
 
