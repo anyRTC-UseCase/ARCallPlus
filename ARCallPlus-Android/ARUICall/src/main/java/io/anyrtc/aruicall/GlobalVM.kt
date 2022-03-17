@@ -60,7 +60,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
                 if (currentRemoteInvitation != null) {
                     callingEvents?.onRemoteInvitationReceived(currentRemoteInvitation)
                    // events?.onRemoteInvitationReceived(currentRemoteInvitation)
-                    cancleNotify()
+                    cancelNotify()
                 }
             })
             needReCallBack = false
@@ -311,13 +311,13 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
             })
     }
 
-    fun cancle() {
+    fun cancel() {
         localInvitation?.let {
             rtmCallManager.cancelLocalInvitation(it, null)
         }
     }
 
-    fun cancle(localInvitation: LocalInvitation) {
+    fun cancel(localInvitation: LocalInvitation) {
         rtmCallManager.cancelLocalInvitation(localInvitation, null)
     }
 
@@ -430,27 +430,34 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
         //返回给主叫的回调：被叫已拒绝呼叫邀请。
         override fun onLocalInvitationRefused(var1: LocalInvitation?, var2: String?) {
             launch({
-                events?.onLocalInvitationRefused(var1, var2)
-                curCallModel?.let {
-                    aruiCallingListener?.onCallEvent(ARUICalling.Event.CALL_FAILED,it.type,it.role,ARUICallConstants.EVENT_CALL_HANG_UP)
-                    stopRing()
-                }
+                    events?.onLocalInvitationRefused(var1, var2)
+                    curCallModel?.let {
+                        aruiCallingListener?.onCallEvent(
+                            ARUICalling.Event.CALL_FAILED,
+                            it.type,
+                            it.role,
+                            ARUICallConstants.EVENT_CALL_HANG_UP
+                        )
+                        stopRing()
+                    }
             })
         }
 
         //返回给主叫的回调：呼叫邀请已被成功取消。
         override fun onLocalInvitationCanceled(var1: LocalInvitation?) {
             launch({
-                events?.onLocalInvitationCanceled(var1)
-                stopRing()
+                if (callingUid==var1?.calleeId) {
+                    events?.onLocalInvitationCanceled(var1)
+                    stopRing()
+                }
             })
         }
 
         //返回给主叫的回调：发出的呼叫邀请失败。可能对方一直没有接听
         override fun onLocalInvitationFailure(var1: LocalInvitation?, var2: Int) {
             launch({
-                events?.onLocalInvitationFailure(var1, var2)
-                stopRing()
+                    events?.onLocalInvitationFailure(var1, var2)
+                    stopRing()
             })
         }
 
@@ -534,7 +541,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
 
         //返回给被叫的回调：接受呼叫邀请成功。
         override fun onRemoteInvitationAccepted(var1: RemoteInvitation?) {
-            cancleNotify()
+            cancelNotify()
             launch({
                 events?.onRemoteInvitationAccepted(var1)
                 startCallTime()
@@ -552,7 +559,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
 
         //返回给被叫的回调：拒绝呼叫邀请成功
         override fun onRemoteInvitationRefused(var1: RemoteInvitation?) {
-            cancleNotify()
+            cancelNotify()
             stopRing()
             launch({
             events?.onRemoteInvitationRefused(var1)
@@ -569,7 +576,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
 
         //返回给被叫的回调：拒绝呼叫邀请成功
         override fun onRemoteInvitationCanceled(var1: RemoteInvitation?) {
-            cancleNotify()
+            cancelNotify()
             launch({
             events?.onRemoteInvitationCanceled(var1)
                 stopRing()
@@ -587,7 +594,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
         }
 
         override fun onRemoteInvitationFailure(var1: RemoteInvitation?, var2: Int) {
-            cancleNotify()
+            cancelNotify()
             launch({
             events?.onRemoteInvitationFailure(var1, var2)
                 stopRing()
@@ -642,7 +649,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
         }
     }
 
-    private fun cancleNotify() {
+    private fun cancelNotify() {
         if (isShowNotify) {
             Notify.cancelNotification(1000)
             isShowNotify = false

@@ -87,7 +87,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
                    }
                }else{
                        localInvitationList.forEach {
-                           globalVM.cancle(it)
+                           globalVM.cancel(it)
                        }
                     globalVM.leaveRtmChannel()
                }
@@ -288,7 +288,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
             btnHangUp.setOnClickListener {
                 if (!isCalled) {
                     localInvitationList.forEach {
-                        globalVM.cancle(it)
+                        globalVM.cancel(it)
                     }
                 }
                 globalVM.leaveRtmChannel()

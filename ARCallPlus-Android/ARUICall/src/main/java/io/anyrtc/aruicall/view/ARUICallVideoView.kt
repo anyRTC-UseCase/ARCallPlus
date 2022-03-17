@@ -67,7 +67,7 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
                             rtcVM.inMeeting = false
                             globalVM.isWaiting = false
                             globalVM.isCalling = false
-                            globalVM.cancle()
+                            globalVM.cancel()
                         }
                         finish()
                     }
@@ -95,7 +95,7 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
                             rtcVM.inMeeting = false
                             globalVM.isWaiting = false
                             globalVM.isCalling = false
-                            globalVM.cancle()
+                            globalVM.cancel()
                         }
                         finish()
                     }
@@ -232,7 +232,7 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
                                     rtcVM.inMeeting = false
                                     globalVM.isWaiting = false
                                     globalVM.isCalling = false
-                                    globalVM.cancle()
+                                    globalVM.cancel()
                                 }
                                 finish()
                             }
@@ -282,7 +282,7 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
                                     rtcVM.inMeeting = false
                                     globalVM.isWaiting = false
                                     globalVM.isCalling = false
-                                    globalVM.cancle()
+                                    globalVM.cancel()
                                 }
                                 finish()
                             }
@@ -360,7 +360,7 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
             bindingVideo.arVideoManager.releaseAllVideoView()
         }
         if (globalVM.curCallModel?.role==ARUICalling.Role.CALL) {//这里本可以不调用 但如果是断网重连进来的就需要再取消一下 否则下次无法再呼叫
-            globalVM.cancle()
+            globalVM.cancel()
         }
         finish()
     }
