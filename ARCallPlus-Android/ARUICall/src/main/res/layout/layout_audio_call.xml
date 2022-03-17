@@ -6,16 +6,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/calling_color_audiocall_background">
 
-    <io.anyrtc.aruicall.view.RoundCornerImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_audio_head"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="98dp"
+        app:shapeAppearanceOverlay="@style/roundedImageStyle"
         android:scaleType="centerCrop"
-        app:radius="15dp"
         android:src="@drawable/aruicalling_ic_avatar">
-    </io.anyrtc.aruicall.view.RoundCornerImageView>
+    </com.google.android.material.imageview.ShapeableImageView>
 
     <TextView
         android:id="@+id/tv_audio_name"

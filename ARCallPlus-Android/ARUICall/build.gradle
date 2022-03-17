@@ -32,30 +32,11 @@ android {
     viewBinding {
         enabled = true
     }
-
-// Because the components are created only during the afterEvaluate phase, you must
-// configure your publications using the afterEvaluate() lifecycle method.
-    afterEvaluate {
-        publishing {
-            publications {
-                // Creates a Maven publication called "release".
-                release(MavenPublication) {
-                    // Applies the component for the release build variant.
-                    from components.release
-
-                    // You can then customize attributes of the publication as shown below.
-                    groupId = 'io.anyrtc.aruicall'
-                    artifactId = 'final'
-                    version = '1.0'
-                }
-            }
-        }
-    }
-
 }
 
 
 dependencies {
+    api fileTree(dir: 'libs', include: ['rtm-release.aar'])
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
@@ -72,6 +53,6 @@ dependencies {
     api 'com.google.code.gson:gson:2.6.2'
     api 'com.github.getActivity:GsonFactory:5.2'
     api "com.github.bumptech.glide:glide:4.12.0"
-    api 'io.anyrtc:rtm:1.0.2.8'
+//    api 'io.anyrtc:rtm:1.0.2.8'
     api 'io.anyrtc:rtc:4.2.3.1'
 }

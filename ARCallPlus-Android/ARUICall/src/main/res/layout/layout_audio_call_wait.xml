@@ -5,15 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/calling_color_audiocall_background">
 
-    <io.anyrtc.aruicall.view.RoundCornerImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_aw_head"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="98dp"
         android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedImageStyle"
         android:src="@drawable/aruicalling_ic_avatar"
-        app:radius="15dp"></io.anyrtc.aruicall.view.RoundCornerImageView>
+       ></com.google.android.material.imageview.ShapeableImageView>
 
     <TextView
         android:id="@+id/tv_aw_name"

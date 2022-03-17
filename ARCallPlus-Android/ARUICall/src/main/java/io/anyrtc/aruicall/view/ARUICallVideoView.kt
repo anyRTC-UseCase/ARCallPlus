@@ -341,8 +341,6 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
             bindingAudio.tvAudioName.text = if (it.users[0].userName.isNullOrEmpty()) it.users[0].userId else it.users[0].userName
             ImageLoader.loadImage(context,bindingAudio.imgAudioHead,it.users[0].headerUrl)
         }
-
-
         rtcVM.disableVideo()
         bindingVideo.btnSpeak.isSelected = false
         rtcVM.setEnableSpeakerphone(false)
