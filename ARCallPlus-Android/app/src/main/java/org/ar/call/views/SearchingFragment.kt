@@ -152,7 +152,7 @@ class SearchingFragment : BaseFragment() {
           httpApi.pushNotification(
             it.phoneNumber,
             title,
-            users.map { it.userId }.toTypedArray(),
+            users.map { item -> item.userId }.toTypedArray(),
             getCallType(type), 0
           ) { success ->
             Log.e("::", "push success=$success")
@@ -173,7 +173,7 @@ class SearchingFragment : BaseFragment() {
         val timeMillis = System.currentTimeMillis()
         calling.call(
           (selectedContact as LinkedList<ItemInfo>).map { item ->
-            item.userInfo.createDate = timeMillis; userModel.updateDB(item.userInfo); ARCallUser(
+            item.userInfo.createDate = timeMillis; ARCallUser(
             item.userInfo.phoneNumber,
             item.userInfo.nickname,
             item.userInfo.avatar
@@ -184,10 +184,10 @@ class SearchingFragment : BaseFragment() {
           else
             ARUICalling.Type.AUDIO
         )
+        userModel.updateAllDate()
       } else {
         val item = (selectedContact as Array<ItemInfo>)[0]
         item.userInfo.createDate = System.currentTimeMillis()
-        userModel.updateDB(item.userInfo)
         calling.call(
           ARCallUser(item.userInfo.phoneNumber, item.userInfo.nickname, item.userInfo.avatar),
           if (isVideo)
@@ -195,6 +195,7 @@ class SearchingFragment : BaseFragment() {
           else
             ARUICalling.Type.AUDIO
         )
+        userModel.updateDB(item.userInfo)
       }
     }
     binding.recycler.let {

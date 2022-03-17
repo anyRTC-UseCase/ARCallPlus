@@ -148,7 +148,7 @@
                     android:layout_height="45dp"
                     android:layout_gravity="end"
                     android:gravity="center"
-                    android:text="@string/_2020_2_2"
+                    tools:text="2022-2-22"
                     android:textColor="#5A5A67"
                     android:textSize="12sp" />
             </FrameLayout>
@@ -183,7 +183,7 @@
                     android:layout_height="45dp"
                     android:layout_gravity="end"
                     android:gravity="center_vertical"
-                    android:text="@string/_2020_2_2"
+                    tools:text="v123.duq.12"
                     android:textColor="#5A5A67"
                     android:textSize="12sp" />
             </FrameLayout>
