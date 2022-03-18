@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A2915E3342413F6B9EFBC28 /* Pods_ARUICallingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87ED51A0589C792C9252A367 /* Pods_ARUICallingApp.framework */; };
+		631A5F8627C75755003313CE /* ARNetWorkHepler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A5F8527C75755003313CE /* ARNetWorkHepler.swift */; };
+		631A5F8C27C76C83003313CE /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 631A5F8B27C76C83003313CE /* test.wav */; };
+		63B95C9627D05F0700112D81 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95C9527D05F0700112D81 /* LoginViewController.swift */; };
+		63B95C9827D06BA200112D81 /* LoginRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95C9727D06BA200112D81 /* LoginRootView.swift */; };
+		63B95C9B27D0704400112D81 /* ARExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95C9A27D0704400112D81 /* ARExtension.swift */; };
+		63B95C9D27D09A5400112D81 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95C9C27D09A5400112D81 /* ProfileManager.swift */; };
+		63B95C9F27D09AD100112D81 /* AppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95C9E27D09AD000112D81 /* AppID.swift */; };
+		63B95CA127D0A14A00112D81 /* RegisterRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CA027D0A14A00112D81 /* RegisterRootView.swift */; };
+		63B95CA327D0A18B00112D81 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CA227D0A18B00112D81 /* RegisterViewController.swift */; };
+		63B95CA627D0C46400112D81 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CA527D0C46400112D81 /* MainViewController.swift */; };
+		63B95CA827D0C50200112D81 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CA727D0C50200112D81 /* AppUtils.swift */; };
+		63B95CAD27D1ABDB00112D81 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CAC27D1ABDB00112D81 /* MineViewController.swift */; };
+		63B95CAF27D1BDFF00112D81 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CAE27D1BDFF00112D81 /* MainCollectionViewCell.swift */; };
+		63B95CB227D1E10100112D81 /* CallingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CB127D1E10100112D81 /* CallingViewController.swift */; };
+		63B95CB427D1ECBC00112D81 /* CallingContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CB327D1ECBC00112D81 /* CallingContactView.swift */; };
+		63B95CB627D3556E00112D81 /* CallingContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B95CB527D3556E00112D81 /* CallingContactCell.swift */; };
+		63CBD9E627BB4AF400D9590F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBD9E527BB4AF400D9590F /* AppDelegate.swift */; };
+		63CBD9E827BB4AF400D9590F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CBD9E727BB4AF400D9590F /* SceneDelegate.swift */; };
+		63CBD9ED27BB4AF400D9590F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CBD9EB27BB4AF400D9590F /* Main.storyboard */; };
+		63CBD9EF27BB4AF500D9590F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CBD9EE27BB4AF500D9590F /* Assets.xcassets */; };
+		63CBD9F227BB4AF500D9590F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CBD9F027BB4AF500D9590F /* LaunchScreen.storyboard */; };
+		8A43726827D881DF0065C6AF /* SelectHeadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A43726727D881DF0065C6AF /* SelectHeadController.swift */; };
+		8A43726A27D894790065C6AF /* SelectHeadViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A43726927D894780065C6AF /* SelectHeadViewCell.swift */; };
+		8A43726C27D8A7350065C6AF /* DialogAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A43726B27D8A7350065C6AF /* DialogAlert.swift */; };
+		8A43726E27D9CCF50065C6AF /* ARBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A43726D27D9CCF50065C6AF /* ARBaseNavigationController.swift */; };
+		8A43727027D9D4E20065C6AF /* StatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A43726F27D9D4E20065C6AF /* StatementViewController.swift */; };
+		8A43727227D9EBEE0065C6AF /* CallingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A43727127D9EBEE0065C6AF /* CallingManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		41AB379A166B70C2F39AD612 /* Pods-ARUICallingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARUICallingApp.debug.xcconfig"; path = "Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		631A5F4027C4E1BE003313CE /* ARUICallingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARUICallingApp.entitlements; sourceTree = "<group>"; };
+		631A5F4127C4E1F7003313CE /* ARUICallingAppRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARUICallingAppRelease.entitlements; sourceTree = "<group>"; };
+		631A5F4227C4E246003313CE /* ARUICallingApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARUICallingApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		631A5F6B27C4ECA3003313CE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		631A5F8527C75755003313CE /* ARNetWorkHepler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNetWorkHepler.swift; sourceTree = "<group>"; };
+		631A5F8B27C76C83003313CE /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
+		63B95C9527D05F0700112D81 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		63B95C9727D06BA200112D81 /* LoginRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRootView.swift; sourceTree = "<group>"; };
+		63B95C9A27D0704400112D81 /* ARExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARExtension.swift; sourceTree = "<group>"; };
+		63B95C9C27D09A5400112D81 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		63B95C9E27D09AD000112D81 /* AppID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppID.swift; sourceTree = "<group>"; };
+		63B95CA027D0A14A00112D81 /* RegisterRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRootView.swift; sourceTree = "<group>"; };
+		63B95CA227D0A18B00112D81 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		63B95CA527D0C46400112D81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		63B95CA727D0C50200112D81 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		63B95CAC27D1ABDB00112D81 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		63B95CAE27D1BDFF00112D81 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		63B95CB127D1E10100112D81 /* CallingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingViewController.swift; sourceTree = "<group>"; };
+		63B95CB327D1ECBC00112D81 /* CallingContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingContactView.swift; sourceTree = "<group>"; };
+		63B95CB527D3556E00112D81 /* CallingContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingContactCell.swift; sourceTree = "<group>"; };
+		63CBD9E227BB4AF400D9590F /* ARUICallingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARUICallingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63CBD9E527BB4AF400D9590F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63CBD9E727BB4AF400D9590F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		63CBD9EC27BB4AF400D9590F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63CBD9EE27BB4AF500D9590F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63CBD9F127BB4AF500D9590F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63CBD9F327BB4AF500D9590F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7223A7F152FA9623D2E5861B /* Pods-ARUICallingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARUICallingApp.release.xcconfig"; path = "Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp.release.xcconfig"; sourceTree = "<group>"; };
+		87ED51A0589C792C9252A367 /* Pods_ARUICallingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARUICallingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A43726727D881DF0065C6AF /* SelectHeadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectHeadController.swift; sourceTree = "<group>"; };
+		8A43726927D894780065C6AF /* SelectHeadViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectHeadViewCell.swift; sourceTree = "<group>"; };
+		8A43726B27D8A7350065C6AF /* DialogAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAlert.swift; sourceTree = "<group>"; };
+		8A43726D27D9CCF50065C6AF /* ARBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARBaseNavigationController.swift; sourceTree = "<group>"; };
+		8A43726F27D9D4E20065C6AF /* StatementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewController.swift; sourceTree = "<group>"; };
+		8A43727127D9EBEE0065C6AF /* CallingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallingManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63CBD9DF27BB4AF400D9590F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2915E3342413F6B9EFBC28 /* Pods_ARUICallingApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5717F6950EAC513F21583DE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				631A5F6B27C4ECA3003313CE /* UserNotifications.framework */,
+				87ED51A0589C792C9252A367 /* Pods_ARUICallingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63B95C9427D05EBE00112D81 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				63B95C9727D06BA200112D81 /* LoginRootView.swift */,
+				63B95C9527D05F0700112D81 /* LoginViewController.swift */,
+				63B95CA027D0A14A00112D81 /* RegisterRootView.swift */,
+				63B95CA227D0A18B00112D81 /* RegisterViewController.swift */,
+				8A43726727D881DF0065C6AF /* SelectHeadController.swift */,
+				8A43726927D894780065C6AF /* SelectHeadViewCell.swift */,
+				63B95CA727D0C50200112D81 /* AppUtils.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		63B95C9927D0702800112D81 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				63B95C9A27D0704400112D81 /* ARExtension.swift */,
+				631A5F8527C75755003313CE /* ARNetWorkHepler.swift */,
+				63B95C9C27D09A5400112D81 /* ProfileManager.swift */,
+				8A43727127D9EBEE0065C6AF /* CallingManager.swift */,
+				8A43726B27D8A7350065C6AF /* DialogAlert.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		63B95CA427D0C45600112D81 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				63B95CA527D0C46400112D81 /* MainViewController.swift */,
+				63B95CAE27D1BDFF00112D81 /* MainCollectionViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		63B95CAB27D1ABB400112D81 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				63B95CAC27D1ABDB00112D81 /* MineViewController.swift */,
+				8A43726F27D9D4E20065C6AF /* StatementViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		63B95CB027D1E0DC00112D81 /* Calling */ = {
+			isa = PBXGroup;
+			children = (
+				63B95CB127D1E10100112D81 /* CallingViewController.swift */,
+				63B95CB327D1ECBC00112D81 /* CallingContactView.swift */,
+				63B95CB527D3556E00112D81 /* CallingContactCell.swift */,
+			);
+			path = Calling;
+			sourceTree = "<group>";
+		};
+		63CBD9D927BB4AF400D9590F = {
+			isa = PBXGroup;
+			children = (
+				63CBD9E427BB4AF400D9590F /* ARUICallingApp */,
+				63CBD9E327BB4AF400D9590F /* Products */,
+				DF442FAF0B53F098FEE83069 /* Pods */,
+				5717F6950EAC513F21583DE5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63CBD9E327BB4AF400D9590F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63CBD9E227BB4AF400D9590F /* ARUICallingApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63CBD9E427BB4AF400D9590F /* ARUICallingApp */ = {
+			isa = PBXGroup;
+			children = (
+				8A43727427D9F0E40065C6AF /* App */,
+				631A5F4227C4E246003313CE /* ARUICallingApp-Bridging-Header.h */,
+				631A5F4027C4E1BE003313CE /* ARUICallingApp.entitlements */,
+				631A5F4127C4E1F7003313CE /* ARUICallingAppRelease.entitlements */,
+				63CBD9EE27BB4AF500D9590F /* Assets.xcassets */,
+				63CBD9F327BB4AF500D9590F /* Info.plist */,
+				63CBD9F027BB4AF500D9590F /* LaunchScreen.storyboard */,
+				63CBD9EB27BB4AF400D9590F /* Main.storyboard */,
+				631A5F8B27C76C83003313CE /* test.wav */,
+			);
+			path = ARUICallingApp;
+			sourceTree = "<group>";
+		};
+		8A43727427D9F0E40065C6AF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8A89F7FC27DEDCD90046880A /* Base */,
+				63B95CB027D1E0DC00112D81 /* Calling */,
+				63B95C9927D0702800112D81 /* Common */,
+				63B95C9427D05EBE00112D81 /* Login */,
+				63B95CA427D0C45600112D81 /* Main */,
+				63B95CAB27D1ABB400112D81 /* Mine */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8A89F7FC27DEDCD90046880A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				63CBD9E527BB4AF400D9590F /* AppDelegate.swift */,
+				63B95C9E27D09AD000112D81 /* AppID.swift */,
+				8A43726D27D9CCF50065C6AF /* ARBaseNavigationController.swift */,
+				63CBD9E727BB4AF400D9590F /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DF442FAF0B53F098FEE83069 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41AB379A166B70C2F39AD612 /* Pods-ARUICallingApp.debug.xcconfig */,
+				7223A7F152FA9623D2E5861B /* Pods-ARUICallingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63CBD9E127BB4AF400D9590F /* ARUICallingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63CBD9F627BB4AF500D9590F /* Build configuration list for PBXNativeTarget "ARUICallingApp" */;
+			buildPhases = (
+				7D3BC88712E9AE6D7271D429 /* [CP] Check Pods Manifest.lock */,
+				63CBD9DE27BB4AF400D9590F /* Sources */,
+				63CBD9DF27BB4AF400D9590F /* Frameworks */,
+				63CBD9E027BB4AF400D9590F /* Resources */,
+				52357542128B77A2B0FC5AFD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARUICallingApp;
+			productName = ARUICallingApp;
+			productReference = 63CBD9E227BB4AF400D9590F /* ARUICallingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63CBD9DA27BB4AF400D9590F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					63CBD9E127BB4AF400D9590F = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+				};
+			};
+			buildConfigurationList = 63CBD9DD27BB4AF400D9590F /* Build configuration list for PBXProject "ARUICallingApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63CBD9D927BB4AF400D9590F;
+			productRefGroup = 63CBD9E327BB4AF400D9590F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63CBD9E127BB4AF400D9590F /* ARUICallingApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63CBD9E027BB4AF400D9590F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631A5F8C27C76C83003313CE /* test.wav in Resources */,
+				63CBD9F227BB4AF500D9590F /* LaunchScreen.storyboard in Resources */,
+				63CBD9EF27BB4AF500D9590F /* Assets.xcassets in Resources */,
+				63CBD9ED27BB4AF400D9590F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52357542128B77A2B0FC5AFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D3BC88712E9AE6D7271D429 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARUICallingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63CBD9DE27BB4AF400D9590F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B95C9827D06BA200112D81 /* LoginRootView.swift in Sources */,
+				63B95CB627D3556E00112D81 /* CallingContactCell.swift in Sources */,
+				8A43726C27D8A7350065C6AF /* DialogAlert.swift in Sources */,
+				63B95CA327D0A18B00112D81 /* RegisterViewController.swift in Sources */,
+				8A43727227D9EBEE0065C6AF /* CallingManager.swift in Sources */,
+				63B95CA827D0C50200112D81 /* AppUtils.swift in Sources */,
+				63B95CA627D0C46400112D81 /* MainViewController.swift in Sources */,
+				631A5F8627C75755003313CE /* ARNetWorkHepler.swift in Sources */,
+				8A43727027D9D4E20065C6AF /* StatementViewController.swift in Sources */,
+				63B95C9D27D09A5400112D81 /* ProfileManager.swift in Sources */,
+				8A43726A27D894790065C6AF /* SelectHeadViewCell.swift in Sources */,
+				63B95CAF27D1BDFF00112D81 /* MainCollectionViewCell.swift in Sources */,
+				63CBD9E627BB4AF400D9590F /* AppDelegate.swift in Sources */,
+				63B95CB427D1ECBC00112D81 /* CallingContactView.swift in Sources */,
+				63B95C9B27D0704400112D81 /* ARExtension.swift in Sources */,
+				63B95C9F27D09AD100112D81 /* AppID.swift in Sources */,
+				63B95C9627D05F0700112D81 /* LoginViewController.swift in Sources */,
+				8A43726E27D9CCF50065C6AF /* ARBaseNavigationController.swift in Sources */,
+				63CBD9E827BB4AF400D9590F /* SceneDelegate.swift in Sources */,
+				63B95CA127D0A14A00112D81 /* RegisterRootView.swift in Sources */,
+				63B95CAD27D1ABDB00112D81 /* MineViewController.swift in Sources */,
+				63B95CB227D1E10100112D81 /* CallingViewController.swift in Sources */,
+				8A43726827D881DF0065C6AF /* SelectHeadController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63CBD9EB27BB4AF400D9590F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63CBD9EC27BB4AF400D9590F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63CBD9F027BB4AF500D9590F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63CBD9F127BB4AF500D9590F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63CBD9F427BB4AF500D9590F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63CBD9F527BB4AF500D9590F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63CBD9F727BB4AF500D9590F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AB379A166B70C2F39AD612 /* Pods-ARUICallingApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ARUICallingApp/ARUICallingApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARUICallingApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ARCallPlus;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ARCallPlus请求访问麦克风用于语音交流？";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ARCallPlus请求访问麦克风用于视频通话？";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anyrtc.ARUICallingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ARUICallingApp/ARUICallingApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		63CBD9F827BB4AF500D9590F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7223A7F152FA9623D2E5861B /* Pods-ARUICallingApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ARUICallingApp/ARUICallingAppRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARUICallingApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ARCallPlus;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ARCallPlus请求访问麦克风用于语音交流？";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "ARCallPlus请求访问麦克风用于视频通话？";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anyrtc.ARUICallingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ARUICallingApp/ARUICallingApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63CBD9DD27BB4AF400D9590F /* Build configuration list for PBXProject "ARUICallingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CBD9F427BB4AF500D9590F /* Debug */,
+				63CBD9F527BB4AF500D9590F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63CBD9F627BB4AF500D9590F /* Build configuration list for PBXNativeTarget "ARUICallingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63CBD9F727BB4AF500D9590F /* Debug */,
+				63CBD9F827BB4AF500D9590F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63CBD9DA27BB4AF400D9590F /* Project object */;
+}

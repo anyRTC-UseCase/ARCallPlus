@@ -1,0 +1,56 @@
+{
+  "name": "ARUICalling",
+  "version": "1.0.0",
+  "summary": "A short description of ARUICalling.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jhdync/ARUICalling",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jhdync": "yangjihua2011@126.com"
+  },
+  "source": {
+    "git": "https://github.com/jhdync/ARUICalling.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "ARUICalling/Classes/**/*",
+  "requires_arc": true,
+  "static_framework": true,
+  "default_subspecs": "RTC",
+  "subspecs": [
+    {
+      "name": "RTC",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": [
+          "$(PODS_TARGET_SRCROOT)/../../SDK/ARtcKit.framework/Headers"
+        ]
+      },
+      "source_files": [
+        "Source/*.{h,m,mm}",
+        "Source/Model/**/*.{h,m,mm}",
+        "Source/UI/**/*.{h,m,mm}"
+      ],
+      "ios": {
+        "frameworks": [
+          "AVFoundation",
+          "Accelerate"
+        ]
+      },
+      "libraries": [
+        "c++",
+        "resolv"
+      ],
+      "resource_bundles": {
+        "ARUICallingKitBundle": [
+          "Resources/*.xcassets",
+          "Resources/AudioFile"
+        ]
+      }
+    }
+  ]
+}
