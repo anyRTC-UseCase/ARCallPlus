@@ -38,14 +38,16 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-
+  s.dependency 'Masonry'
+  s.dependency 'SDWebImage', '~> 5.0'
+  s.dependency 'ARtmKit_iOS', '~> 1.0.2.0'
   
   s.requires_arc = true
   s.static_framework = true
   
   s.default_subspec = 'RTC'
   s.subspec 'RTC' do |rtc|
-    #rtc.dependency 'ARtcKit_iOS'
+    rtc.dependency 'ARtcKit_iOS'
     framework_path="../../SDK/ARtcKit.framework"
     rtc.pod_target_xcconfig={
         'HEADER_SEARCH_PATHS'=>["$(PODS_TARGET_SRCROOT)/#{framework_path}/Headers"]

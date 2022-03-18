@@ -3,7 +3,12 @@ use_frameworks!
 
 target 'ARUICallingApp' do
 
-
+pod 'JPush'
+pod 'Alamofire'
+pod 'SwiftyJSON'
+pod 'SnapKit'
+pod 'SDWebImage'
+pod 'AttributedString'
 pod 'ARUICalling',  :path => '../', :subspecs => ["RTC"]
 
 end
