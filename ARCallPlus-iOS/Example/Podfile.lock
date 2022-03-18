@@ -1,0 +1,16 @@
+PODS:
+  - ARUICalling/RTC (1.0.0)
+
+DEPENDENCIES:
+  - ARUICalling/RTC (from `../`)
+
+EXTERNAL SOURCES:
+  ARUICalling:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ARUICalling: db453facbe3825e3c70ab0f20ce172561601a987
+
+PODFILE CHECKSUM: 01c5ed4eb1b8cb9f47a3a108481c21b6e8623121
+
+COCOAPODS: 1.11.2
