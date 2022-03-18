@@ -45,6 +45,7 @@ public class ARTCGroupVideoLayout extends RelativeLayout {
     private ARTCGroupVideoLayoutManager.UserNoResponseListener noResponseListener;
     private boolean needNotifyNoResponse = true;
 
+
     public void setNoResponseListener(ARTCGroupVideoLayoutManager.UserNoResponseListener noResponseListener) {
         this.noResponseListener = noResponseListener;
     }

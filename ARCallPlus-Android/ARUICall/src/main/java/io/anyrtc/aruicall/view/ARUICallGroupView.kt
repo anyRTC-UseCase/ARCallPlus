@@ -120,6 +120,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
                 llRoot.setBackgroundColor(context.resources.getColor(R.color.calling_color_videocall_background))
             }
         }
+        bindingVideo.arVideoManager.initView(mContext)
         bindingVideo.arVideoManager.setNoResponseListener(this)
         bindingVideo.arVideoManager.setMySelfUserId(globalVM.userId,globalVM.curCallModel?.type)
         var layout = bindingVideo.arVideoManager.findVideoCallLayout(globalVM.userId)
@@ -166,6 +167,12 @@ open class ARUICallGroupView @JvmOverloads constructor(
 
         bindingReceive.run {
             isWaiting = true
+            globalVM.curCallModel?.let {
+                it.users.find { it.userId == remoteId }?.let {
+                    ImageLoader.loadImage(mContext,ivCaller,it.headerUrl)
+                }
+            }
+
             if (type == ARUICalling.Type.VIDEO){
                 rlRoot.setBackgroundColor(context.resources.getColor(R.color.calling_color_videocall_background))
                 tvState.text = "邀请您视频通话..."

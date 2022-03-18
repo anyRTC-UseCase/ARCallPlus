@@ -66,10 +66,9 @@ public class ARTCVideoLayoutManager extends RelativeLayout {
     public ARTCVideoLayoutManager(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
-        initView(context);
     }
 
-    private void initView(Context context) {
+    public void initView() {
         Log.i(TAG, "initView: ");
 
         mLayoutEntityList = new LinkedList<>();

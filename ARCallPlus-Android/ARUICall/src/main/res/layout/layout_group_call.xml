@@ -20,6 +20,7 @@
 
         <io.anyrtc.aruicall.view.ARTCGroupVideoLayoutManager
             android:id="@+id/ar_video_manager"
+            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
            >
@@ -117,17 +118,17 @@
                 android:text="挂断"
                 android:textColor="@color/calling_color_white"></Button>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btn_switch_camera"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
                 android:layout_toRightOf="@+id/btn_hang_up"
                 android:background="@null"
-                android:padding="10dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/aruicalling_ic_switch_camera"
-                android:textColor="@color/white"></ImageButton>
+                android:textColor="@color/white"></ImageView>
         </RelativeLayout>
 
         <TextView

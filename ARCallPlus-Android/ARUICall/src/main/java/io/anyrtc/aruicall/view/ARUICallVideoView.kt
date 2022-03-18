@@ -1,6 +1,7 @@
 package io.anyrtc.aruicall.view
 
 import android.content.Context
+import android.util.Log
 import android.widget.RelativeLayout
 import android.view.LayoutInflater
 import android.view.TextureView
@@ -123,7 +124,7 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
         })
 
        rtcVM.remoteVideoDecode.observe(this,{
-           globalVM.stopRing()
+            globalVM.stopRing()
             setupRemoteVideo(it)
         })
 
@@ -371,6 +372,7 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
         if (globalVM.curCallModel?.type == ARUICalling.Type.AUDIO){
             rootView.addView(bindingAudio.root,0)
         }else{
+            bindingVideo.arVideoManager.initView()
             rootView.addView(bindingVideo.root,0)
         }
         var watchParams = ""
@@ -443,8 +445,9 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
         var layout = bindingVideo.arVideoManager.findCloudView(uid)
         if (layout==null){
             layout = bindingVideo.arVideoManager.allocCloudVideoView(uid)
+            rtcVM.setupRemoteVideo(VideoCanvas(layout.videoView,Constants.RENDER_MODE_HIDDEN,uid))
         }
-        rtcVM.setupRemoteVideo(VideoCanvas(layout.videoView,Constants.RENDER_MODE_HIDDEN,uid))
+
     }
 
     override fun onLocalInvitationRefused(var1: LocalInvitation?, var2: String?) {
@@ -489,6 +492,8 @@ open class ARUICallVideoView @JvmOverloads constructor (protected val mContext: 
     override fun onRemoteInvitationAccepted(var1: RemoteInvitation?) {
         super.onRemoteInvitationAccepted(var1)
             joinRTC(JSONObject(var1?.content))
+
+
     }
 
 

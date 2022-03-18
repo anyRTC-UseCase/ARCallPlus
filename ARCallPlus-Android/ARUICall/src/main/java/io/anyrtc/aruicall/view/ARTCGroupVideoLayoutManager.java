@@ -39,22 +39,19 @@ public class ARTCGroupVideoLayoutManager extends RelativeLayout {
 
     public ARTCGroupVideoLayoutManager(Context context) {
         super(context);
-        initView(context);
     }
 
 
     public ARTCGroupVideoLayoutManager(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initView(context);
     }
 
 
     public ARTCGroupVideoLayoutManager(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initView(context);
     }
 
-    private void initView(Context context) {
+    public void initView(Context context) {
         Log.i(TAG, "initView: ");
         mContext = context;
         // 做成正方形
