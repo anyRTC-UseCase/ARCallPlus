@@ -28,7 +28,7 @@ class RtcVM(){
     val userJoin = MutableLiveData<String>()
     val nobodyComeIn = MutableLiveData<Boolean>()
     val userOffline = MutableLiveData<Int>()
-
+    var calledLeave = false
 
 
 
@@ -98,7 +98,10 @@ class RtcVM(){
     }
 
     fun leaveChannel(){
-        rtcEngine?.leaveChannel()
+        if (!calledLeave){//
+            rtcEngine?.leaveChannel()
+            calledLeave = true
+        }
     }
 
     fun muteLocalAudioStream(mute:Boolean){
