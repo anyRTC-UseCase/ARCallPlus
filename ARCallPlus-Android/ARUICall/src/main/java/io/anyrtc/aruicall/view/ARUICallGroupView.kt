@@ -20,6 +20,7 @@ import org.ar.rtc.video.VideoCanvas
 import org.ar.rtm.LocalInvitation
 import org.ar.rtm.RemoteInvitation
 import org.ar.rtm.RtmChannelMember
+import org.json.JSONObject
 
 open class ARUICallGroupView @JvmOverloads constructor(
     mContext: Context
@@ -68,10 +69,10 @@ open class ARUICallGroupView @JvmOverloads constructor(
                 rtcVM.initRTC(context, type.ordinal, channelId, globalVM.userId)
                 if (role==ARUICalling.Role.CALL){
                     globalVM.startCallRing()
-                    initVideoLayout()
                 }else{
                     globalVM.startRing()
                     initWaitLayout()
+
                 }
                 globalVM.joinRTMChannel(channelId)
             }
@@ -120,7 +121,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
                 llRoot.setBackgroundColor(context.resources.getColor(R.color.calling_color_videocall_background))
             }
         }
-        bindingVideo.arVideoManager.initView(mContext)
+        bindingVideo.arVideoManager.initView(context)
         bindingVideo.arVideoManager.setNoResponseListener(this)
         bindingVideo.arVideoManager.setMySelfUserId(globalVM.userId,globalVM.curCallModel?.type)
         var layout = bindingVideo.arVideoManager.findVideoCallLayout(globalVM.userId)
@@ -416,12 +417,21 @@ open class ARUICallGroupView @JvmOverloads constructor(
         callArray?.find { it.userId==userId }?.let {
             callArray?.remove(it)
         }
-        bindingVideo.arVideoManager.recyclerVideoCallLayout(userId)
-        if (bindingVideo.arVideoManager.count==1){
-            globalVM.leaveRtmChannel()
-            toast("通话已结束")
-            finish()
+        if (type == ARUICalling.Type.AUDIO){
+            if (callArray!!.size<=1){
+                globalVM.leaveRtmChannel()
+                toast("通话已结束")
+                finish()
+            }
+        }else{
+            bindingVideo.arVideoManager.recyclerVideoCallLayout(userId)
+            if (bindingVideo.arVideoManager.count<=1){
+                globalVM.leaveRtmChannel()
+                toast("通话已结束")
+                finish()
+            }
         }
+
     }
 
 
@@ -455,7 +465,19 @@ open class ARUICallGroupView @JvmOverloads constructor(
 
     override fun onLocalInvitationRefused(var1: LocalInvitation?, var2: String?) {
         super.onLocalInvitationRefused(var1, var2)
-        toast("${var1?.calleeId}拒绝了呼叫邀请")
+        if(var2.isNullOrEmpty()){
+            toast("${var1?.calleeId}拒绝了呼叫邀请")
+        }else{
+            val reasonJSON = JSONObject(var2)
+            if (reasonJSON.has("Cmd")){
+                val reason = reasonJSON.getString("Cmd")
+                if (reason=="Calling"){
+                    Toast.makeText(context,"对方正忙",Toast.LENGTH_SHORT).show()
+                }
+            }else{
+                toast("${var1?.calleeId}拒绝了呼叫邀请")
+            }
+        }
         removeMember(var1?.calleeId.toString())
         localInvitationList.remove(var1)
     }

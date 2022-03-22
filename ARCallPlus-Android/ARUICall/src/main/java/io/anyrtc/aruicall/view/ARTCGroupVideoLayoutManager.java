@@ -103,7 +103,7 @@ public class ARTCGroupVideoLayoutManager extends RelativeLayout {
      * 根据 userId 找到已经分配的 View
      */
     public ARTCGroupVideoLayout findVideoCallLayout(String userId) {
-        if (userId == null) return null;
+        if (userId == null||mLayoutEntityList==null) return null;
         for (RTCLayoutEntity layoutEntity : mLayoutEntityList) {
             if (layoutEntity.userId.equals(userId)) {
                 return layoutEntity.layout;
@@ -147,7 +147,7 @@ public class ARTCGroupVideoLayoutManager extends RelativeLayout {
      * @param userId
      */
     public void recyclerVideoCallLayout(String userId) {
-        if (userId == null) return;
+        if (userId == null||mLayoutEntityList==null) return;
         Iterator iterator = mLayoutEntityList.iterator();
         while (iterator.hasNext()) {
             RTCLayoutEntity item = (RTCLayoutEntity) iterator.next();
