@@ -1,0 +1,6 @@
+framework module ARUICalling {
+  umbrella header "ARUICalling-umbrella.h"
+
+  export *
+  module * { export * }
+}

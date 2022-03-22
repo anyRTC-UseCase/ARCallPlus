@@ -1,0 +1,1025 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03EC1BA3C83CC04544AB73D1CAD5595A /* ARTCCallingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3B51B6737BD1A5EF2DEBB38799A2E11 /* ARTCCallingModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05435A8D2F7BF0022C8C294AA690FC8D /* ARTCCalling.m in Sources */ = {isa = PBXBuildFile; fileRef = C35F8A0AC0A568539BE51F7EBD8DB43E /* ARTCCalling.m */; };
+		092C5FBE43858FE973B16497C748C42B /* ARUICalling-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 349C67E166F3B47A95FCF49CA95B0BBA /* ARUICalling-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B423E6AECE4A6561EDBE2D890C9F651 /* ARUIDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EFD868A590F202E1C4DF35FE63F82E /* ARUIDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12FF2237C5F76DDD7B4A916A0B8E8570 /* ARUICallingGroupCell.h in Headers */ = {isa = PBXBuildFile; fileRef = FEB6624FF110E96DAB1C8D3EB1CF26B6 /* ARUICallingGroupCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14076C1B61510951F30FABB139D498CB /* ARUICalleeGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D09ABDD0E23469CC39727E4C332049 /* ARUICalleeGroupCell.m */; };
+		14DC30B569A80FCD2073DCBD7E7C2117 /* ARUICallingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85B2876FA4A19AD9890DD66F425668 /* ARUICallingBaseView.m */; };
+		15166394F63E43566D6CBC58C46BDE13 /* ARUIAudioUserContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 09B8813F6514DB980C44BA5DD1133DD5 /* ARUIAudioUserContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1694C2C74D4D3361B91024FFC01913BB /* NSObject+ARExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7A5F8426CDECE731588AAAC4A10CC0 /* NSObject+ARExtension.m */; };
+		17BDEB07BA56BFE3B4572E0DF7AFED96 /* ARUIVideoUserContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70F45F35ABFEADB810FC74221D06CB8 /* ARUIVideoUserContainerView.m */; };
+		257542E659155FA73366B9EA8BC5AB63 /* NSObject+ARExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4811AFAD402BC859B22BB7C73BFABD92 /* NSObject+ARExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25837D4D62FBC81B825A5ED20C95A878 /* ARUIVideoUserContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A3FA99E6BAD61708AFC8BACF2942CD5D /* ARUIVideoUserContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3603A241F7ED987EDF3E6884D1A662A1 /* ARUIInvitedContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 08AA0C3E0DED7CB42FE8855C70A29AF1 /* ARUIInvitedContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDF3CF493E0CE835F77222DA83645DE /* ARTCCalling+Signal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8724FF08D97D981A0C0DEA1B847822D3 /* ARTCCalling+Signal.m */; };
+		41BB0EC2815DEA8AA2F852C643699A34 /* ARUICalling-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB595E27F162EFA47B6B22EC6093FB3 /* ARUICalling-dummy.m */; };
+		447CEABB0982832195F1F34A65B0BFEA /* ARUICallingBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF9C560D5D69C497D326D6A3477861A /* ARUICallingBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47FB28E582E3B6AE7950521F332712F2 /* ARUIAudioUserContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD670034CBBEC04274E68DC75B173137 /* ARUIAudioUserContainerView.m */; };
+		4BFBFF6A367340350401D3CADB8BD1BC /* ARUICallingControlButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FB1BBB74EA8794FD26F309FC74E7DF /* ARUICallingControlButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EF87FB683E79D4B0112EE4BC4E8A882 /* ARTCCallingHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EE18E6C17767560AA48ED3BFF27DFDD /* ARTCCallingHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50CA0DFF0D077CE7B6072B70D8FCCC16 /* ARUICallingDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A9287BCCF2DF01CE7ADED1CAB8957 /* ARUICallingDelegateManager.m */; };
+		526F9973F03AA35B7292E524CC0FE16A /* AudioFile in Resources */ = {isa = PBXBuildFile; fileRef = 4EDFD37AFC31367D36AE90240660123E /* AudioFile */; };
+		52C7E92D0877C303C9296357A38A3D39 /* UIColor+ARUIHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 621BB99CC592FE4C208E9D786A5FB320 /* UIColor+ARUIHex.m */; };
+		5407854819D02DC4EDD7812F7372BD71 /* ARUIInvitedContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D5961E8D8BFA5D02CAFC0186CD681B /* ARUIInvitedContainerView.m */; };
+		5FF6BF2F6C511A8DD822C3E0A2DD770A /* ARUIGroupCallingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 155220F0FA3AD1BF830484C200625F37 /* ARUIGroupCallingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D3FB240B2A5563656DE10640E6BA1B3 /* ARUICommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A1C205DE47427707988021F187B53 /* ARUICommonUtil.m */; };
+		757E27C593E492ECFD38F546DC68B1A3 /* ARUICallingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 51F3153D5E889F4846057D6617DDF4AD /* ARUICallingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		759C036A058663E12C847FF2A15FFEC9 /* ARTCCalling+Signal.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0AC364D96030AF2EBAF0C6A4A667E7 /* ARTCCalling+Signal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77024D6624E352F3C584F9949DA66E30 /* ARUICallingAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B5BAA5719BE4B9B64EE1BA8BBBA808 /* ARUICallingAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AB62A52B5D53A4F6FC7004357498E42 /* UIView+ARUIToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6650675C2FCA48200FF535D9395BCAA7 /* UIView+ARUIToast.m */; };
+		7BBB289BF3E83394420CDD7ECD79AC9E /* ARUICalling.h in Headers */ = {isa = PBXBuildFile; fileRef = DDD558DE758045177155EE43328AEF4B /* ARUICalling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D4566E7C3F2EFC60CBD537BB0E69338 /* ARUICommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 0266DBAE13E0FEF599AABFE5D2A22C4A /* ARUICommonUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		817674DB244E7F892E0712F06A224DFC /* ARUICallingAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8B32D4E9CE4DF99B78D476C3B1F8BA /* ARUICallingAudioPlayer.m */; };
+		8ADCB4D9E71F28BDF09CB3BD5664676D /* ARUILogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 145ED79398282C0BEB3D93127C4C9BB3 /* ARUILogin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CBD52715970D9E6C98251A560C82A26 /* ARUICallingGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F07930A29B6E45F10979C9029E4B0A1 /* ARUICallingGroupCell.m */; };
+		8F1341C028B2274E18DCADE59A261B14 /* ARUIInvitedActionProtocal.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAA40826C9275C10E414DBD4BB5C7C8 /* ARUIInvitedActionProtocal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		909AC465920CB29C37BBFDF430AD9F34 /* ARTCCalling.h in Headers */ = {isa = PBXBuildFile; fileRef = 63328C73D7C9C78D228CC0CE2F4E7C9C /* ARTCCalling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D3E4624C3E51D9B5A10C3E2BE7A4DD6 /* ARUIGroupCallingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF097A88D19A8E4242A88DFA95655F96 /* ARUIGroupCallingView.m */; };
+		A088E9FD1616F1570CEC6E4A15C40F69 /* ARTCGCDTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE60976A5B61144204785AC6471303D /* ARTCGCDTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1D169002B78018EF1923269D714B3CC /* ARUICalleeDelegateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 80492BF18C80BA8CD218FE71EF56D3FD /* ARUICalleeDelegateManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6D78230824C64CC072C4415CE18D350 /* ARUICallingDelegateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 580F6F2107469817F10D80830734E5C6 /* ARUICallingDelegateManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8A7B55C548A0E0D6E61F46103E900AC /* ARTCCallingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 369D13D9B0C88F5F4DC1470698477BB4 /* ARTCCallingDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A97C5BBE0168EABFD645C7A495737304 /* ARUICalleeDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE801182FFB6044F671D464CA6BFB3E /* ARUICalleeDelegateManager.m */; };
+		AE34B1D530DFA58B60B6D68A47B84E42 /* ARTCGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C40F9E38E9113F6004EAAD109313DA68 /* ARTCGCDTimer.m */; };
+		BCFF908B645D90E01FD8E2D00E7508A4 /* ARUICallingControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 73524084B3AE98FB805D548ED14431FF /* ARUICallingControlButton.m */; };
+		C793EA3158DD18DF941C6A29F8433F54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CD78CA491C5235ED674D613E53C82115 /* ARUICallingVideoRenderView.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FA63176A510499AED760D57E0653E0 /* ARUICallingVideoRenderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0517421BA25A3682785F500EF11564A /* ARUICalleeGroupCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F2F2D9F08CAAC25F9EF2DDB8004573 /* ARUICalleeGroupCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0C45C6F66D6F3E3566745133A6D4198 /* ARUICallingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B5917FD0BEA4BD1AFCEFCD40E7C433 /* ARUICallingView.m */; };
+		D2F941F495C2F9D83C003203B1CD6620 /* Pods-ARUICallingApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C93F13434D08E2A17368B85DE82714BB /* Pods-ARUICallingApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6FE4B28DD60B519970D3079D6A8BE13 /* Calling.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDD84B34DF2F0E015256E990273E194 /* Calling.xcassets */; };
+		DDDFD0EFA34995633F78FC6EBD469839 /* ARTCCallingUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FD9213C34C3ECD52858AB4D5CD5BBC22 /* ARTCCallingUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E291B35D1C396B84E8F2631BC0401C3D /* ARUILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 696F68E269D6BF8CEC89DA352D860C7E /* ARUILogin.m */; };
+		E334BA4F47F1466799549250DAF08B53 /* ARUICalling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A1601AD0AEE2C5A13DD54AF58B038 /* ARUICalling.m */; };
+		F0D99B85C740CC5D72B4A3F43F67F8D3 /* ARTCCallingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD7ACBA5222D93C8875D83F5766EF47 /* ARTCCallingUtils.m */; };
+		F11A8D863626CADFED38FD4F26232A8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F2056B3ED29514258C322374DBDA5F80 /* UIColor+ARUIHex.h in Headers */ = {isa = PBXBuildFile; fileRef = 62A2451CC4BA20084F69BD3A71663E4C /* UIColor+ARUIHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7849ACB6E212BE90C702AC9A0A4364A /* Pods-ARUICallingApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20756343EEDEB79AAEC48EE3615D13C2 /* Pods-ARUICallingApp-dummy.m */; };
+		FBC5CE962B00EF8DBAFC2B8D67EEB413 /* UIView+ARUIToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 05ED74A4AFCA9F81BE8B926A53FA4F4F /* UIView+ARUIToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBDFEDF0B287A4A2F138E0F8A679BD21 /* ARUICallingVideoRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2594A1FA56652825B16C88B9604FC6 /* ARUICallingVideoRenderView.m */; };
+		FE19338851C9E82134D6EFEB207D6BDA /* ARTCCallingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C0C4EF7750C3BF2E7B4E1D691E7468 /* ARTCCallingModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC80E7D8924A21F63B889D920646187C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F9933C584F4F03A81DBD850F6DFD5D3;
+			remoteInfo = ARUICalling;
+		};
+		E526ABC723A0D026BE71F9D85F1B47F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B056AE962D3C5E287729E828E0FE69C5;
+			remoteInfo = "ARUICalling-ARUICallingKitBundle";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0266DBAE13E0FEF599AABFE5D2A22C4A /* ARUICommonUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICommonUtil.h; sourceTree = "<group>"; };
+		05ED74A4AFCA9F81BE8B926A53FA4F4F /* UIView+ARUIToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+ARUIToast.h"; sourceTree = "<group>"; };
+		08AA0C3E0DED7CB42FE8855C70A29AF1 /* ARUIInvitedContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUIInvitedContainerView.h; sourceTree = "<group>"; };
+		09B8813F6514DB980C44BA5DD1133DD5 /* ARUIAudioUserContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUIAudioUserContainerView.h; sourceTree = "<group>"; };
+		0F07930A29B6E45F10979C9029E4B0A1 /* ARUICallingGroupCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICallingGroupCell.m; sourceTree = "<group>"; };
+		0F3C61409507F528FE35C77BAEAA2FE4 /* ARUICalling */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ARUICalling; path = ARUICalling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		145ED79398282C0BEB3D93127C4C9BB3 /* ARUILogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ARUILogin.h; path = Source/ARUILogin.h; sourceTree = "<group>"; };
+		155220F0FA3AD1BF830484C200625F37 /* ARUIGroupCallingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUIGroupCallingView.h; sourceTree = "<group>"; };
+		15C005B1EB2D34DEC56DF3DD4A0693EC /* ARUICalling.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARUICalling.modulemap; sourceTree = "<group>"; };
+		1F2A9287BCCF2DF01CE7ADED1CAB8957 /* ARUICallingDelegateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICallingDelegateManager.m; sourceTree = "<group>"; };
+		20756343EEDEB79AAEC48EE3615D13C2 /* Pods-ARUICallingApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARUICallingApp-dummy.m"; sourceTree = "<group>"; };
+		25FB1BBB74EA8794FD26F309FC74E7DF /* ARUICallingControlButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICallingControlButton.h; sourceTree = "<group>"; };
+		2C9054B3098DF1246A3F790BA0F9D941 /* Pods-ARUICallingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARUICallingApp.release.xcconfig"; sourceTree = "<group>"; };
+		2CDD84B34DF2F0E015256E990273E194 /* Calling.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Calling.xcassets; path = Resources/Calling.xcassets; sourceTree = "<group>"; };
+		349C67E166F3B47A95FCF49CA95B0BBA /* ARUICalling-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARUICalling-umbrella.h"; sourceTree = "<group>"; };
+		369D13D9B0C88F5F4DC1470698477BB4 /* ARTCCallingDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARTCCallingDelegate.h; sourceTree = "<group>"; };
+		3AD411A6923FB21D5064E80F206CD560 /* Pods-ARUICallingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARUICallingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		40C0C4EF7750C3BF2E7B4E1D691E7468 /* ARTCCallingModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARTCCallingModel.m; sourceTree = "<group>"; };
+		4406376606D98A7B7AE3EA88E1886DB7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4811AFAD402BC859B22BB7C73BFABD92 /* NSObject+ARExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+ARExtension.h"; sourceTree = "<group>"; };
+		4AB595E27F162EFA47B6B22EC6093FB3 /* ARUICalling-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARUICalling-dummy.m"; sourceTree = "<group>"; };
+		4C725BF6371EC6D8E2898D921A3F08E5 /* ARUICalling-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARUICalling-prefix.pch"; sourceTree = "<group>"; };
+		4EDFD37AFC31367D36AE90240660123E /* AudioFile */ = {isa = PBXFileReference; includeInIndex = 1; name = AudioFile; path = Resources/AudioFile; sourceTree = "<group>"; };
+		51F3153D5E889F4846057D6617DDF4AD /* ARUICallingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICallingView.h; sourceTree = "<group>"; };
+		52EFD868A590F202E1C4DF35FE63F82E /* ARUIDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUIDefine.h; sourceTree = "<group>"; };
+		580F6F2107469817F10D80830734E5C6 /* ARUICallingDelegateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICallingDelegateManager.h; sourceTree = "<group>"; };
+		5A2C27E7A733E564CA509927C7680111 /* ARUICalling-ARUICallingKitBundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "ARUICalling-ARUICallingKitBundle"; path = ARUICallingKitBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DE801182FFB6044F671D464CA6BFB3E /* ARUICalleeDelegateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICalleeDelegateManager.m; sourceTree = "<group>"; };
+		621BB99CC592FE4C208E9D786A5FB320 /* UIColor+ARUIHex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ARUIHex.m"; sourceTree = "<group>"; };
+		62A2451CC4BA20084F69BD3A71663E4C /* UIColor+ARUIHex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+ARUIHex.h"; sourceTree = "<group>"; };
+		63328C73D7C9C78D228CC0CE2F4E7C9C /* ARTCCalling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARTCCalling.h; sourceTree = "<group>"; };
+		64D5961E8D8BFA5D02CAFC0186CD681B /* ARUIInvitedContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUIInvitedContainerView.m; sourceTree = "<group>"; };
+		6650675C2FCA48200FF535D9395BCAA7 /* UIView+ARUIToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+ARUIToast.m"; sourceTree = "<group>"; };
+		68F2F2D9F08CAAC25F9EF2DDB8004573 /* ARUICalleeGroupCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICalleeGroupCell.h; sourceTree = "<group>"; };
+		696F68E269D6BF8CEC89DA352D860C7E /* ARUILogin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ARUILogin.m; path = Source/ARUILogin.m; sourceTree = "<group>"; };
+		6C2A1C205DE47427707988021F187B53 /* ARUICommonUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICommonUtil.m; sourceTree = "<group>"; };
+		6F260EFC8CD9B862F0DD15F85021A5E3 /* Pods-ARUICallingApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARUICallingApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		70492FA5125C8ABE0CB2E1D2874FF747 /* ARUICalling.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ARUICalling.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73524084B3AE98FB805D548ED14431FF /* ARUICallingControlButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICallingControlButton.m; sourceTree = "<group>"; };
+		7FDA1B2115D2D5402010BD29AB5FD0B8 /* Pods-ARUICallingApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARUICallingApp-Info.plist"; sourceTree = "<group>"; };
+		80492BF18C80BA8CD218FE71EF56D3FD /* ARUICalleeDelegateManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICalleeDelegateManager.h; sourceTree = "<group>"; };
+		81B5917FD0BEA4BD1AFCEFCD40E7C433 /* ARUICallingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICallingView.m; sourceTree = "<group>"; };
+		8724FF08D97D981A0C0DEA1B847822D3 /* ARTCCalling+Signal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARTCCalling+Signal.m"; sourceTree = "<group>"; };
+		8B6C968EB824488F06257BE39FEFF861 /* ARUICalling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARUICalling.release.xcconfig; sourceTree = "<group>"; };
+		8EE18E6C17767560AA48ED3BFF27DFDD /* ARTCCallingHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARTCCallingHeader.h; sourceTree = "<group>"; };
+		8FD7ACBA5222D93C8875D83F5766EF47 /* ARTCCallingUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARTCCallingUtils.m; sourceTree = "<group>"; };
+		9BF9C560D5D69C497D326D6A3477861A /* ARUICallingBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICallingBaseView.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0A1601AD0AEE2C5A13DD54AF58B038 /* ARUICalling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ARUICalling.m; path = Source/ARUICalling.m; sourceTree = "<group>"; };
+		A3B51B6737BD1A5EF2DEBB38799A2E11 /* ARTCCallingModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARTCCallingModel.h; sourceTree = "<group>"; };
+		A3FA99E6BAD61708AFC8BACF2942CD5D /* ARUIVideoUserContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUIVideoUserContainerView.h; sourceTree = "<group>"; };
+		AC0CBCA5EA32D7002376F18FF552E721 /* ResourceBundle-ARUICallingKitBundle-ARUICalling-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ARUICallingKitBundle-ARUICalling-Info.plist"; sourceTree = "<group>"; };
+		AD670034CBBEC04274E68DC75B173137 /* ARUIAudioUserContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUIAudioUserContainerView.m; sourceTree = "<group>"; };
+		B0B5BAA5719BE4B9B64EE1BA8BBBA808 /* ARUICallingAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICallingAudioPlayer.h; sourceTree = "<group>"; };
+		B0FA63176A510499AED760D57E0653E0 /* ARUICallingVideoRenderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICallingVideoRenderView.h; sourceTree = "<group>"; };
+		B70F45F35ABFEADB810FC74221D06CB8 /* ARUIVideoUserContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUIVideoUserContainerView.m; sourceTree = "<group>"; };
+		BC04C47D4B6A37C2E1A37AE430EB1454 /* ARUICalling-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ARUICalling-Info.plist"; sourceTree = "<group>"; };
+		BCC6914F09D797092757BDE9856E9704 /* Pods-ARUICallingApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ARUICallingApp"; path = Pods_ARUICallingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1C9A25C00A5D25E69252C4A4D15652 /* Pods-ARUICallingApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARUICallingApp.modulemap"; sourceTree = "<group>"; };
+		BF85B2876FA4A19AD9890DD66F425668 /* ARUICallingBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICallingBaseView.m; sourceTree = "<group>"; };
+		C35F8A0AC0A568539BE51F7EBD8DB43E /* ARTCCalling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARTCCalling.m; sourceTree = "<group>"; };
+		C40F9E38E9113F6004EAAD109313DA68 /* ARTCGCDTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARTCGCDTimer.m; sourceTree = "<group>"; };
+		C93F13434D08E2A17368B85DE82714BB /* Pods-ARUICallingApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARUICallingApp-umbrella.h"; sourceTree = "<group>"; };
+		CF2594A1FA56652825B16C88B9604FC6 /* ARUICallingVideoRenderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICallingVideoRenderView.m; sourceTree = "<group>"; };
+		D9B8AE2C85D49D04CAE0A8CB8212589A /* Pods-ARUICallingApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARUICallingApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DCAA40826C9275C10E414DBD4BB5C7C8 /* ARUIInvitedActionProtocal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUIInvitedActionProtocal.h; sourceTree = "<group>"; };
+		DDD558DE758045177155EE43328AEF4B /* ARUICalling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ARUICalling.h; path = Source/ARUICalling.h; sourceTree = "<group>"; };
+		DE7A5F8426CDECE731588AAAC4A10CC0 /* NSObject+ARExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ARExtension.m"; sourceTree = "<group>"; };
+		E49CCF5DF1E207E68D1740DA6A52B64E /* ARUICalling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARUICalling.debug.xcconfig; sourceTree = "<group>"; };
+		EA19F1C43B690C82527B74F655EA445A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EB0AC364D96030AF2EBAF0C6A4A667E7 /* ARTCCalling+Signal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARTCCalling+Signal.h"; sourceTree = "<group>"; };
+		EF097A88D19A8E4242A88DFA95655F96 /* ARUIGroupCallingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUIGroupCallingView.m; sourceTree = "<group>"; };
+		F0F2B17C44875D8EE883D224659C4B98 /* Pods-ARUICallingApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARUICallingApp-resources.sh"; sourceTree = "<group>"; };
+		F3D09ABDD0E23469CC39727E4C332049 /* ARUICalleeGroupCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICalleeGroupCell.m; sourceTree = "<group>"; };
+		FB8B32D4E9CE4DF99B78D476C3B1F8BA /* ARUICallingAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ARUICallingAudioPlayer.m; sourceTree = "<group>"; };
+		FD9213C34C3ECD52858AB4D5CD5BBC22 /* ARTCCallingUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARTCCallingUtils.h; sourceTree = "<group>"; };
+		FEB6624FF110E96DAB1C8D3EB1CF26B6 /* ARUICallingGroupCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARUICallingGroupCell.h; sourceTree = "<group>"; };
+		FEE60976A5B61144204785AC6471303D /* ARTCGCDTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ARTCGCDTimer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34B1371CEB61B15A096BA51024722B78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11A8D863626CADFED38FD4F26232A8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45925F4E9BB0B43A34CDEE28752A1096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D8196F85DF42D9BA5FB1E962689E657 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C793EA3158DD18DF941C6A29F8433F54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07B4643CAD75521E2972FA97B19DF2FC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9BF9C560D5D69C497D326D6A3477861A /* ARUICallingBaseView.h */,
+				BF85B2876FA4A19AD9890DD66F425668 /* ARUICallingBaseView.m */,
+			);
+			name = Base;
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0A26312876EF0C0CEAAA7A6AF1D044A8 /* ARUICalling */ = {
+			isa = PBXGroup;
+			children = (
+				E6608B300B59B0D6B94B0431A18FAAA9 /* Pod */,
+				F6A4452F8AB9F8AA3D1B2D48AAF1AA89 /* RTC */,
+				9E6ABE7F54232466912B309BD1334DB9 /* Support Files */,
+			);
+			name = ARUICalling;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		45C8ED30125651FB44D46574270ADA1B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FEE60976A5B61144204785AC6471303D /* ARTCGCDTimer.h */,
+				C40F9E38E9113F6004EAAD109313DA68 /* ARTCGCDTimer.m */,
+				B0B5BAA5719BE4B9B64EE1BA8BBBA808 /* ARUICallingAudioPlayer.h */,
+				FB8B32D4E9CE4DF99B78D476C3B1F8BA /* ARUICallingAudioPlayer.m */,
+				0266DBAE13E0FEF599AABFE5D2A22C4A /* ARUICommonUtil.h */,
+				6C2A1C205DE47427707988021F187B53 /* ARUICommonUtil.m */,
+				52EFD868A590F202E1C4DF35FE63F82E /* ARUIDefine.h */,
+				62A2451CC4BA20084F69BD3A71663E4C /* UIColor+ARUIHex.h */,
+				621BB99CC592FE4C208E9D786A5FB320 /* UIColor+ARUIHex.m */,
+				05ED74A4AFCA9F81BE8B926A53FA4F4F /* UIView+ARUIToast.h */,
+				6650675C2FCA48200FF535D9395BCAA7 /* UIView+ARUIToast.m */,
+			);
+			name = Common;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		474A64A7EF0C0CFFDA1E9CD878069316 /* Pods-ARUICallingApp */ = {
+			isa = PBXGroup;
+			children = (
+				BF1C9A25C00A5D25E69252C4A4D15652 /* Pods-ARUICallingApp.modulemap */,
+				D9B8AE2C85D49D04CAE0A8CB8212589A /* Pods-ARUICallingApp-acknowledgements.markdown */,
+				6F260EFC8CD9B862F0DD15F85021A5E3 /* Pods-ARUICallingApp-acknowledgements.plist */,
+				20756343EEDEB79AAEC48EE3615D13C2 /* Pods-ARUICallingApp-dummy.m */,
+				7FDA1B2115D2D5402010BD29AB5FD0B8 /* Pods-ARUICallingApp-Info.plist */,
+				F0F2B17C44875D8EE883D224659C4B98 /* Pods-ARUICallingApp-resources.sh */,
+				C93F13434D08E2A17368B85DE82714BB /* Pods-ARUICallingApp-umbrella.h */,
+				3AD411A6923FB21D5064E80F206CD560 /* Pods-ARUICallingApp.debug.xcconfig */,
+				2C9054B3098DF1246A3F790BA0F9D941 /* Pods-ARUICallingApp.release.xcconfig */,
+			);
+			name = "Pods-ARUICallingApp";
+			path = "Target Support Files/Pods-ARUICallingApp";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5F084ACA4180E6EAE0E94F177134F2FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09B8813F6514DB980C44BA5DD1133DD5 /* ARUIAudioUserContainerView.h */,
+				AD670034CBBEC04274E68DC75B173137 /* ARUIAudioUserContainerView.m */,
+				68F2F2D9F08CAAC25F9EF2DDB8004573 /* ARUICalleeGroupCell.h */,
+				F3D09ABDD0E23469CC39727E4C332049 /* ARUICalleeGroupCell.m */,
+				25FB1BBB74EA8794FD26F309FC74E7DF /* ARUICallingControlButton.h */,
+				73524084B3AE98FB805D548ED14431FF /* ARUICallingControlButton.m */,
+				FEB6624FF110E96DAB1C8D3EB1CF26B6 /* ARUICallingGroupCell.h */,
+				0F07930A29B6E45F10979C9029E4B0A1 /* ARUICallingGroupCell.m */,
+				B0FA63176A510499AED760D57E0653E0 /* ARUICallingVideoRenderView.h */,
+				CF2594A1FA56652825B16C88B9604FC6 /* ARUICallingVideoRenderView.m */,
+				08AA0C3E0DED7CB42FE8855C70A29AF1 /* ARUIInvitedContainerView.h */,
+				64D5961E8D8BFA5D02CAFC0186CD681B /* ARUIInvitedContainerView.m */,
+				A3FA99E6BAD61708AFC8BACF2942CD5D /* ARUIVideoUserContainerView.h */,
+				B70F45F35ABFEADB810FC74221D06CB8 /* ARUIVideoUserContainerView.m */,
+			);
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A5EF7AEA9903E596C2FCFBD6028E765 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				51F3153D5E889F4846057D6617DDF4AD /* ARUICallingView.h */,
+				81B5917FD0BEA4BD1AFCEFCD40E7C433 /* ARUICallingView.m */,
+				155220F0FA3AD1BF830484C200625F37 /* ARUIGroupCallingView.h */,
+				EF097A88D19A8E4242A88DFA95655F96 /* ARUIGroupCallingView.m */,
+				07B4643CAD75521E2972FA97B19DF2FC /* Base */,
+				45C8ED30125651FB44D46574270ADA1B /* Common */,
+				B29DFFF82A4D2A41944F1F5A75D59FB7 /* Manager */,
+				B440B03F04DD2BA9D745E8CA829C9FDD /* Protocol */,
+				5F084ACA4180E6EAE0E94F177134F2FE /* Views */,
+			);
+			name = UI;
+			path = Source/UI;
+			sourceTree = "<group>";
+		};
+		9E6ABE7F54232466912B309BD1334DB9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				15C005B1EB2D34DEC56DF3DD4A0693EC /* ARUICalling.modulemap */,
+				4AB595E27F162EFA47B6B22EC6093FB3 /* ARUICalling-dummy.m */,
+				BC04C47D4B6A37C2E1A37AE430EB1454 /* ARUICalling-Info.plist */,
+				4C725BF6371EC6D8E2898D921A3F08E5 /* ARUICalling-prefix.pch */,
+				349C67E166F3B47A95FCF49CA95B0BBA /* ARUICalling-umbrella.h */,
+				E49CCF5DF1E207E68D1740DA6A52B64E /* ARUICalling.debug.xcconfig */,
+				8B6C968EB824488F06257BE39FEFF861 /* ARUICalling.release.xcconfig */,
+				AC0CBCA5EA32D7002376F18FF552E721 /* ResourceBundle-ARUICallingKitBundle-ARUICalling-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ARUICalling";
+			sourceTree = "<group>";
+		};
+		A315F73726863B5A2AF2B3A5E1D44F69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F3C61409507F528FE35C77BAEAA2FE4 /* ARUICalling */,
+				5A2C27E7A733E564CA509927C7680111 /* ARUICalling-ARUICallingKitBundle */,
+				BCC6914F09D797092757BDE9856E9704 /* Pods-ARUICallingApp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B29DFFF82A4D2A41944F1F5A75D59FB7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				80492BF18C80BA8CD218FE71EF56D3FD /* ARUICalleeDelegateManager.h */,
+				5DE801182FFB6044F671D464CA6BFB3E /* ARUICalleeDelegateManager.m */,
+				580F6F2107469817F10D80830734E5C6 /* ARUICallingDelegateManager.h */,
+				1F2A9287BCCF2DF01CE7ADED1CAB8957 /* ARUICallingDelegateManager.m */,
+			);
+			name = Manager;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B440B03F04DD2BA9D745E8CA829C9FDD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DCAA40826C9275C10E414DBD4BB5C7C8 /* ARUIInvitedActionProtocal.h */,
+			);
+			name = Protocol;
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BF10F6755C00FD2E643BFD236DB74931 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63328C73D7C9C78D228CC0CE2F4E7C9C /* ARTCCalling.h */,
+				369D13D9B0C88F5F4DC1470698477BB4 /* ARTCCallingDelegate.h */,
+				EFBB676629D8E848EED2CAECFE11E28A /* impl */,
+				EC8107D3FBBFD8EB332E3F87989CAB5B /* Util */,
+			);
+			name = Model;
+			path = Source/Model;
+			sourceTree = "<group>";
+		};
+		C2F1CB940EC22050FAFA1FA68E17E286 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A26312876EF0C0CEAAA7A6AF1D044A8 /* ARUICalling */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CBB8E7806065968650BED7AF2F12BA55 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				474A64A7EF0C0CFFDA1E9CD878069316 /* Pods-ARUICallingApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C2F1CB940EC22050FAFA1FA68E17E286 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				A315F73726863B5A2AF2B3A5E1D44F69 /* Products */,
+				CBB8E7806065968650BED7AF2F12BA55 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6608B300B59B0D6B94B0431A18FAAA9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				70492FA5125C8ABE0CB2E1D2874FF747 /* ARUICalling.podspec */,
+				EA19F1C43B690C82527B74F655EA445A /* LICENSE */,
+				4406376606D98A7B7AE3EA88E1886DB7 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		EC8107D3FBBFD8EB332E3F87989CAB5B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8EE18E6C17767560AA48ED3BFF27DFDD /* ARTCCallingHeader.h */,
+				FD9213C34C3ECD52858AB4D5CD5BBC22 /* ARTCCallingUtils.h */,
+				8FD7ACBA5222D93C8875D83F5766EF47 /* ARTCCallingUtils.m */,
+				4811AFAD402BC859B22BB7C73BFABD92 /* NSObject+ARExtension.h */,
+				DE7A5F8426CDECE731588AAAC4A10CC0 /* NSObject+ARExtension.m */,
+			);
+			name = Util;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EFBB676629D8E848EED2CAECFE11E28A /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				C35F8A0AC0A568539BE51F7EBD8DB43E /* ARTCCalling.m */,
+				EB0AC364D96030AF2EBAF0C6A4A667E7 /* ARTCCalling+Signal.h */,
+				8724FF08D97D981A0C0DEA1B847822D3 /* ARTCCalling+Signal.m */,
+				A3B51B6737BD1A5EF2DEBB38799A2E11 /* ARTCCallingModel.h */,
+				40C0C4EF7750C3BF2E7B4E1D691E7468 /* ARTCCallingModel.m */,
+			);
+			name = impl;
+			path = impl;
+			sourceTree = "<group>";
+		};
+		F6A4452F8AB9F8AA3D1B2D48AAF1AA89 /* RTC */ = {
+			isa = PBXGroup;
+			children = (
+				DDD558DE758045177155EE43328AEF4B /* ARUICalling.h */,
+				9E0A1601AD0AEE2C5A13DD54AF58B038 /* ARUICalling.m */,
+				145ED79398282C0BEB3D93127C4C9BB3 /* ARUILogin.h */,
+				696F68E269D6BF8CEC89DA352D860C7E /* ARUILogin.m */,
+				4EDFD37AFC31367D36AE90240660123E /* AudioFile */,
+				2CDD84B34DF2F0E015256E990273E194 /* Calling.xcassets */,
+				BF10F6755C00FD2E643BFD236DB74931 /* Model */,
+				8A5EF7AEA9903E596C2FCFBD6028E765 /* UI */,
+			);
+			name = RTC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		18D4EDC11D6EA0386436B904BC48C599 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2F941F495C2F9D83C003203B1CD6620 /* Pods-ARUICallingApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5B6A86BD5EF88BAAB3017F4761D6E87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909AC465920CB29C37BBFDF430AD9F34 /* ARTCCalling.h in Headers */,
+				759C036A058663E12C847FF2A15FFEC9 /* ARTCCalling+Signal.h in Headers */,
+				A8A7B55C548A0E0D6E61F46103E900AC /* ARTCCallingDelegate.h in Headers */,
+				4EF87FB683E79D4B0112EE4BC4E8A882 /* ARTCCallingHeader.h in Headers */,
+				03EC1BA3C83CC04544AB73D1CAD5595A /* ARTCCallingModel.h in Headers */,
+				DDDFD0EFA34995633F78FC6EBD469839 /* ARTCCallingUtils.h in Headers */,
+				A088E9FD1616F1570CEC6E4A15C40F69 /* ARTCGCDTimer.h in Headers */,
+				15166394F63E43566D6CBC58C46BDE13 /* ARUIAudioUserContainerView.h in Headers */,
+				A1D169002B78018EF1923269D714B3CC /* ARUICalleeDelegateManager.h in Headers */,
+				D0517421BA25A3682785F500EF11564A /* ARUICalleeGroupCell.h in Headers */,
+				7BBB289BF3E83394420CDD7ECD79AC9E /* ARUICalling.h in Headers */,
+				092C5FBE43858FE973B16497C748C42B /* ARUICalling-umbrella.h in Headers */,
+				77024D6624E352F3C584F9949DA66E30 /* ARUICallingAudioPlayer.h in Headers */,
+				447CEABB0982832195F1F34A65B0BFEA /* ARUICallingBaseView.h in Headers */,
+				4BFBFF6A367340350401D3CADB8BD1BC /* ARUICallingControlButton.h in Headers */,
+				A6D78230824C64CC072C4415CE18D350 /* ARUICallingDelegateManager.h in Headers */,
+				12FF2237C5F76DDD7B4A916A0B8E8570 /* ARUICallingGroupCell.h in Headers */,
+				CD78CA491C5235ED674D613E53C82115 /* ARUICallingVideoRenderView.h in Headers */,
+				757E27C593E492ECFD38F546DC68B1A3 /* ARUICallingView.h in Headers */,
+				7D4566E7C3F2EFC60CBD537BB0E69338 /* ARUICommonUtil.h in Headers */,
+				0B423E6AECE4A6561EDBE2D890C9F651 /* ARUIDefine.h in Headers */,
+				5FF6BF2F6C511A8DD822C3E0A2DD770A /* ARUIGroupCallingView.h in Headers */,
+				8F1341C028B2274E18DCADE59A261B14 /* ARUIInvitedActionProtocal.h in Headers */,
+				3603A241F7ED987EDF3E6884D1A662A1 /* ARUIInvitedContainerView.h in Headers */,
+				8ADCB4D9E71F28BDF09CB3BD5664676D /* ARUILogin.h in Headers */,
+				25837D4D62FBC81B825A5ED20C95A878 /* ARUIVideoUserContainerView.h in Headers */,
+				257542E659155FA73366B9EA8BC5AB63 /* NSObject+ARExtension.h in Headers */,
+				F2056B3ED29514258C322374DBDA5F80 /* UIColor+ARUIHex.h in Headers */,
+				FBC5CE962B00EF8DBAFC2B8D67EEB413 /* UIView+ARUIToast.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6F9933C584F4F03A81DBD850F6DFD5D3 /* ARUICalling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A496F1B4F7CCF625307F17812EB45B0 /* Build configuration list for PBXNativeTarget "ARUICalling" */;
+			buildPhases = (
+				B5B6A86BD5EF88BAAB3017F4761D6E87 /* Headers */,
+				DD9E11D57FA3EAC698538DD4115FBDAF /* Sources */,
+				9D8196F85DF42D9BA5FB1E962689E657 /* Frameworks */,
+				9BD1AF460702B760842E5E8C368BD9AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE62081B57C0406D3F61EF2F5CF28991 /* PBXTargetDependency */,
+			);
+			name = ARUICalling;
+			productName = ARUICalling;
+			productReference = 0F3C61409507F528FE35C77BAEAA2FE4 /* ARUICalling */;
+			productType = "com.apple.product-type.framework";
+		};
+		B056AE962D3C5E287729E828E0FE69C5 /* ARUICalling-ARUICallingKitBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA182E9FE4976426ADAED6813AAE3ABC /* Build configuration list for PBXNativeTarget "ARUICalling-ARUICallingKitBundle" */;
+			buildPhases = (
+				3BB70DC46395919BF19237A627640E0C /* Sources */,
+				45925F4E9BB0B43A34CDEE28752A1096 /* Frameworks */,
+				65BE6DE724779A90440EF9885D011C8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ARUICalling-ARUICallingKitBundle";
+			productName = ARUICallingKitBundle;
+			productReference = 5A2C27E7A733E564CA509927C7680111 /* ARUICalling-ARUICallingKitBundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B2F1BB65013CB0B5642B4B9F587FD82B /* Pods-ARUICallingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C60073BEDF951533038EB8760B725736 /* Build configuration list for PBXNativeTarget "Pods-ARUICallingApp" */;
+			buildPhases = (
+				18D4EDC11D6EA0386436B904BC48C599 /* Headers */,
+				97C0A75427A8BB1DBF8D7F4419661D18 /* Sources */,
+				34B1371CEB61B15A096BA51024722B78 /* Frameworks */,
+				EA24908CC3C3D84782246675F488D9EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F362EF3407042B3E78F91BBB4CFE485 /* PBXTargetDependency */,
+			);
+			name = "Pods-ARUICallingApp";
+			productName = Pods_ARUICallingApp;
+			productReference = BCC6914F09D797092757BDE9856E9704 /* Pods-ARUICallingApp */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A315F73726863B5A2AF2B3A5E1D44F69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F9933C584F4F03A81DBD850F6DFD5D3 /* ARUICalling */,
+				B056AE962D3C5E287729E828E0FE69C5 /* ARUICalling-ARUICallingKitBundle */,
+				B2F1BB65013CB0B5642B4B9F587FD82B /* Pods-ARUICallingApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65BE6DE724779A90440EF9885D011C8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526F9973F03AA35B7292E524CC0FE16A /* AudioFile in Resources */,
+				D6FE4B28DD60B519970D3079D6A8BE13 /* Calling.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BD1AF460702B760842E5E8C368BD9AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA24908CC3C3D84782246675F488D9EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BB70DC46395919BF19237A627640E0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97C0A75427A8BB1DBF8D7F4419661D18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7849ACB6E212BE90C702AC9A0A4364A /* Pods-ARUICallingApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9E11D57FA3EAC698538DD4115FBDAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05435A8D2F7BF0022C8C294AA690FC8D /* ARTCCalling.m in Sources */,
+				3DDF3CF493E0CE835F77222DA83645DE /* ARTCCalling+Signal.m in Sources */,
+				FE19338851C9E82134D6EFEB207D6BDA /* ARTCCallingModel.m in Sources */,
+				F0D99B85C740CC5D72B4A3F43F67F8D3 /* ARTCCallingUtils.m in Sources */,
+				AE34B1D530DFA58B60B6D68A47B84E42 /* ARTCGCDTimer.m in Sources */,
+				47FB28E582E3B6AE7950521F332712F2 /* ARUIAudioUserContainerView.m in Sources */,
+				A97C5BBE0168EABFD645C7A495737304 /* ARUICalleeDelegateManager.m in Sources */,
+				14076C1B61510951F30FABB139D498CB /* ARUICalleeGroupCell.m in Sources */,
+				E334BA4F47F1466799549250DAF08B53 /* ARUICalling.m in Sources */,
+				41BB0EC2815DEA8AA2F852C643699A34 /* ARUICalling-dummy.m in Sources */,
+				817674DB244E7F892E0712F06A224DFC /* ARUICallingAudioPlayer.m in Sources */,
+				14DC30B569A80FCD2073DCBD7E7C2117 /* ARUICallingBaseView.m in Sources */,
+				BCFF908B645D90E01FD8E2D00E7508A4 /* ARUICallingControlButton.m in Sources */,
+				50CA0DFF0D077CE7B6072B70D8FCCC16 /* ARUICallingDelegateManager.m in Sources */,
+				8CBD52715970D9E6C98251A560C82A26 /* ARUICallingGroupCell.m in Sources */,
+				FBDFEDF0B287A4A2F138E0F8A679BD21 /* ARUICallingVideoRenderView.m in Sources */,
+				D0C45C6F66D6F3E3566745133A6D4198 /* ARUICallingView.m in Sources */,
+				6D3FB240B2A5563656DE10640E6BA1B3 /* ARUICommonUtil.m in Sources */,
+				9D3E4624C3E51D9B5A10C3E2BE7A4DD6 /* ARUIGroupCallingView.m in Sources */,
+				5407854819D02DC4EDD7812F7372BD71 /* ARUIInvitedContainerView.m in Sources */,
+				E291B35D1C396B84E8F2631BC0401C3D /* ARUILogin.m in Sources */,
+				17BDEB07BA56BFE3B4572E0DF7AFED96 /* ARUIVideoUserContainerView.m in Sources */,
+				1694C2C74D4D3361B91024FFC01913BB /* NSObject+ARExtension.m in Sources */,
+				52C7E92D0877C303C9296357A38A3D39 /* UIColor+ARUIHex.m in Sources */,
+				7AB62A52B5D53A4F6FC7004357498E42 /* UIView+ARUIToast.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F362EF3407042B3E78F91BBB4CFE485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ARUICalling;
+			target = 6F9933C584F4F03A81DBD850F6DFD5D3 /* ARUICalling */;
+			targetProxy = BC80E7D8924A21F63B889D920646187C /* PBXContainerItemProxy */;
+		};
+		BE62081B57C0406D3F61EF2F5CF28991 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ARUICalling-ARUICallingKitBundle";
+			target = B056AE962D3C5E287729E828E0FE69C5 /* ARUICalling-ARUICallingKitBundle */;
+			targetProxy = E526ABC723A0D026BE71F9D85F1B47F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E82E388B978567B9043CC67DF6BD1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6C968EB824488F06257BE39FEFF861 /* ARUICalling.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/ARUICalling/ARUICalling-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARUICalling/ARUICalling-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/ARUICalling/ARUICalling.modulemap";
+				PRODUCT_MODULE_NAME = ARUICalling;
+				PRODUCT_NAME = ARUICalling;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2F682CC9C7FA17A7EFA49CBD77A64E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9054B3098DF1246A3F790BA0F9D941 /* Pods-ARUICallingApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67F0DF0286E1F93A70DDC4414637D851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E49CCF5DF1E207E68D1740DA6A52B64E /* ARUICalling.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/ARUICalling/ARUICalling-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARUICalling/ARUICalling-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/ARUICalling/ARUICalling.modulemap";
+				PRODUCT_MODULE_NAME = ARUICalling;
+				PRODUCT_NAME = ARUICalling;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BD9FC9392ABA28F4B11367179503E24F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E49CCF5DF1E207E68D1740DA6A52B64E /* ARUICalling.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ARUICalling";
+				ENABLE_BITCODE = NO;
+				IBSC_MODULE = ARUICalling;
+				INFOPLIST_FILE = "Target Support Files/ARUICalling/ResourceBundle-ARUICallingKitBundle-ARUICalling-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = ARUICallingKitBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		DED6E893D69FB4F7730F4D81BE724B2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AD411A6923FB21D5064E80F206CD560 /* Pods-ARUICallingApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ARUICallingApp/Pods-ARUICallingApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F883A632C0D475AC08CF99C07FF091E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6C968EB824488F06257BE39FEFF861 /* ARUICalling.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ARUICalling";
+				ENABLE_BITCODE = NO;
+				IBSC_MODULE = ARUICalling;
+				INFOPLIST_FILE = "Target Support Files/ARUICalling/ResourceBundle-ARUICallingKitBundle-ARUICalling-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = ARUICallingKitBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A496F1B4F7CCF625307F17812EB45B0 /* Build configuration list for PBXNativeTarget "ARUICalling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67F0DF0286E1F93A70DDC4414637D851 /* Debug */,
+				1E82E388B978567B9043CC67DF6BD1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA182E9FE4976426ADAED6813AAE3ABC /* Build configuration list for PBXNativeTarget "ARUICalling-ARUICallingKitBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD9FC9392ABA28F4B11367179503E24F /* Debug */,
+				F883A632C0D475AC08CF99C07FF091E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C60073BEDF951533038EB8760B725736 /* Build configuration list for PBXNativeTarget "Pods-ARUICallingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED6E893D69FB4F7730F4D81BE724B2D /* Debug */,
+				2F682CC9C7FA17A7EFA49CBD77A64E8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
