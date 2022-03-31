@@ -41,15 +41,19 @@ class HomeActivity : BaseActivity() {
     val userModel = UserModel()
     userModel.queryDB {
       val selfInfo = userModel.selfInfo!!
-      ARUILogin.init(this, BuildConfig.APP_ID)
+      ARUILogin.init(applicationContext, BuildConfig.APP_ID)
       ARUILogin.login(ARCallUser(selfInfo.phoneNumber, selfInfo.nickname, selfInfo.avatar), object : org.ar.rtm.ResultCallback<Void> {
         override fun onSuccess(var1: Void?) {
-          ARUICalling.getInstance(this@HomeActivity) {
-            userModel.removeSelf()
-            startActivity(Intent(this@HomeActivity, LoginActivity::class.java).also { a ->
-              a.putExtra("anotherLogin", true)
-            })
-            finish()
+          ARUICalling.getInstance(applicationContext) {
+            //userModel.removeSelf()
+            runOnUiThread {
+              dismissLoading()
+              startActivity(Intent(applicationContext, LoginActivity::class.java).also { a ->
+                a.putExtra("anotherLogin", true)
+                a.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+              })
+              finish()
+            }
           }
           httpInit(selfInfo)
         }
@@ -74,7 +78,7 @@ class HomeActivity : BaseActivity() {
   }
 
   private fun initPush(selfInfo: UserModel.UserInfo) {
-    XGPushManager.registerPush(this@HomeActivity, object : XGIOperateCallback {
+    XGPushManager.registerPush(applicationContext, object : XGIOperateCallback {
       override fun onSuccess(p0: Any?, p1: Int) {
         //XGPushManager.upsertAccounts(this@HomeActivity, selfInfo.phoneNumber)
         setPushUser(selfInfo)
@@ -87,7 +91,7 @@ class HomeActivity : BaseActivity() {
   }
 
   private fun setPushUser(selfInfo: UserModel.UserInfo) {
-    XGPushManager.upsertAccounts(this@HomeActivity, mutableListOf(XGPushManager.AccountInfo(0, selfInfo.phoneNumber)), object : XGIOperateCallback {
+    XGPushManager.upsertAccounts(applicationContext, mutableListOf(XGPushManager.AccountInfo(0, selfInfo.phoneNumber)), object : XGIOperateCallback {
       override fun onSuccess(p0: Any?, p1: Int) {
         runOnUiThread { dismissLoading() }
       }
@@ -99,7 +103,7 @@ class HomeActivity : BaseActivity() {
   }
 
   private fun checkNotification() {
-    val compat = NotificationManagerCompat.from(this)
+    val compat = NotificationManagerCompat.from(applicationContext)
     if (compat.areNotificationsEnabled()) {
       return
     }
@@ -126,10 +130,11 @@ class HomeActivity : BaseActivity() {
       myselfFragment.arguments = bundle
     }
 
-    val selectedColor = ContextCompat.getColor(this, R.color.primaryColor)
+    val selectedColor = ContextCompat.getColor(applicationContext, R.color.primaryColor)
     val defColor = Color.parseColor("#333333")
 
     replaceFragment(homeFragment)
+    binding.loadingMask.setOnClickListener {  }
     binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
       when (checkedId) {
         R.id.home -> {
@@ -173,7 +178,7 @@ class HomeActivity : BaseActivity() {
   }
 
   override fun onDestroy() {
-    //ARUILogin.logout()
+    ARUILogin.logout()
     //ARUILogin.unInit()
     super.onDestroy()
   }
