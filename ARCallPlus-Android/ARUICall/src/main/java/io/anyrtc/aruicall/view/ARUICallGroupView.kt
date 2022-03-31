@@ -69,6 +69,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
                 rtcVM.initRTC(context, type.ordinal, channelId, globalVM.userId)
                 if (role==ARUICalling.Role.CALL){
                     globalVM.startCallRing()
+                    initVideoLayout()
                 }else{
                     globalVM.startRing()
                     initWaitLayout()
@@ -182,6 +183,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
             }else{
                 rlRoot.setBackgroundColor(context.resources.getColor(R.color.calling_color_audiocall_background))
                 tvState.text = "邀请您语音通话..."
+                tvCallerName.setTextColor(context.resources.getColor(R.color.calling_color_second))
                 tvState.setTextColor(context.resources.getColor(R.color.calling_color_second))
                 btnHangUp.setTextColor(context.resources.getColor(R.color.calling_color_second))
                 btnAccept.setTextColor(context.resources.getColor(R.color.calling_color_second))
@@ -191,7 +193,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
                 resources.getDimensionPixelOffset(R.dimen.rtccalling_small_image_size)
             val margin =
                 resources.getDimensionPixelOffset(R.dimen.rtccalling_small_image_left_margin)
-            callArray?.forEachIndexed { index, s ->
+            callArray?.filterNot { it.userId==remoteId }?.forEachIndexed { index, s ->
                 llRemoteUser.addView(ImageView(context).apply {
                     layoutParams = LinearLayout.LayoutParams(squareWidth,squareWidth).apply {
                         if (index!=0){
@@ -417,20 +419,12 @@ open class ARUICallGroupView @JvmOverloads constructor(
         callArray?.find { it.userId==userId }?.let {
             callArray?.remove(it)
         }
-        if (type == ARUICalling.Type.AUDIO){
-            if (callArray!!.size<=1){
-                globalVM.leaveRtmChannel()
-                toast("通话已结束")
-                finish()
+        bindingVideo.arVideoManager.recyclerVideoCallLayout(userId)
+            if (callArray!!.size<=0) {
+                    globalVM.leaveRtmChannel()
+                    toast("通话已结束")
+                    finish()
             }
-        }else{
-            bindingVideo.arVideoManager.recyclerVideoCallLayout(userId)
-            if (bindingVideo.arVideoManager.count<=1){
-                globalVM.leaveRtmChannel()
-                toast("通话已结束")
-                finish()
-            }
-        }
 
     }
 
@@ -459,23 +453,42 @@ open class ARUICallGroupView @JvmOverloads constructor(
 
     override fun onLocalInvitationFailure(var1: LocalInvitation?, var2: Int) {
         super.onLocalInvitationFailure(var1, var2)
+        callArray?.find { it.userId==var1?.calleeId }?.let {
+            Toast.makeText(context,"${it.userName}无响应",Toast.LENGTH_SHORT).show()
+        }?:let {
+            Toast.makeText(context,"${var1?.calleeId}无响应",Toast.LENGTH_SHORT).show()
+        }
         localInvitationList.remove(var1)
         removeMember(var1!!.calleeId)
+
     }
 
     override fun onLocalInvitationRefused(var1: LocalInvitation?, var2: String?) {
         super.onLocalInvitationRefused(var1, var2)
         if(var2.isNullOrEmpty()){
-            toast("${var1?.calleeId}拒绝了呼叫邀请")
+            callArray?.find { it.userId==var1?.calleeId }?.let {
+                Toast.makeText(context,"${it.userName}拒绝了呼叫邀请",Toast.LENGTH_SHORT).show()
+            }?:let {
+                Toast.makeText(context,"${var1?.calleeId}拒绝了呼叫邀请",Toast.LENGTH_SHORT).show()
+            }
         }else{
             val reasonJSON = JSONObject(var2)
             if (reasonJSON.has("Cmd")){
                 val reason = reasonJSON.getString("Cmd")
                 if (reason=="Calling"){
-                    Toast.makeText(context,"对方正忙",Toast.LENGTH_SHORT).show()
+                    callArray?.find { it.userId==var1?.calleeId }?.let {
+                        Toast.makeText(context,"${it.userName}正忙",Toast.LENGTH_SHORT).show()
+                    }?:let {
+                        Toast.makeText(context,"${var1?.calleeId}正忙",Toast.LENGTH_SHORT).show()
+                    }
+
                 }
             }else{
-                toast("${var1?.calleeId}拒绝了呼叫邀请")
+                callArray?.find { it.userId==var1?.calleeId }?.let {
+                    Toast.makeText(context,"${it.userName}拒绝了呼叫邀请",Toast.LENGTH_SHORT).show()
+                }?:let {
+                    Toast.makeText(context,"${var1?.calleeId}拒绝了呼叫邀请",Toast.LENGTH_SHORT).show()
+                }
             }
         }
         removeMember(var1?.calleeId.toString())

@@ -7,18 +7,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/fl_head"
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
-        android:layout_height="wrap_content">
+        android:layout_height="190dp">
 
         <ImageView
             android:id="@+id/iv_caller"
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:src="@drawable/aruicalling_ic_avatar"></ImageView>
 
@@ -26,12 +25,13 @@
             android:id="@+id/tv_caller_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|bottom"
-            android:layout_margin="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
             android:textColor="@color/white"
             android:text="UserName">
         </TextView>
-    </FrameLayout>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_state"
@@ -44,14 +44,26 @@
         android:textColor="@color/white"
         android:textSize="12sp"></TextView>
 
+    <TextView
+        android:id="@+id/tv_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_state"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="他们也在"
+        android:textColor="@color/calling_color_second"
+        android:textSize="11sp"></TextView>
+
         <LinearLayout
             android:id="@+id/ll_remote_user"
             android:layout_width="match_parent"
             android:gravity="center"
-            android:layout_below="@+id/tv_state"
+            android:layout_below="@+id/tv_other"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
+
         </LinearLayout>
 
 

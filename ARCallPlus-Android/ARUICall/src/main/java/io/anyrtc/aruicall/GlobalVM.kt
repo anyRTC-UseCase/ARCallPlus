@@ -42,7 +42,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
 
     val callTime = MutableLiveData<Long>(0)
     private val callTimeInterval by lazy { Interval(-1, 1, TimeUnit.SECONDS, 1) }//收到对方异常离开 倒计10秒 10秒内对方还未恢复 则退出
-
+    private var isStartTime = false
     init {
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
     }
@@ -493,7 +493,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
                     }
                     users = users.filterNot { it.userId == userId } as ArrayList<ARCallUser>
                 }
-                curCallModel = CurCallModel(users,ARUICalling.Type.values()[content.mode],ARUICalling.Role.CALLED,content.chanId,content.isConference,var1?.content.toString(),var1!!.callerId,callerName = if (content.userInfo == null){var1!!.callerId}else{content.userInfo?.find { it.userId==userId }?.userName.toString()})
+                curCallModel = CurCallModel(users,ARUICalling.Type.values()[content.mode],ARUICalling.Role.CALLED,content.chanId,content.isConference,var1?.content.toString(),var1!!.callerId,callerName = if (content.userInfo == null){var1!!.callerId}else{content.userInfo?.find { it.userId==var1?.callerId }?.userName.toString()})
             }
 
             launch({
@@ -576,6 +576,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
 
         //返回给被叫的回调：拒绝呼叫邀请成功
         override fun onRemoteInvitationCanceled(var1: RemoteInvitation?) {
+            Log.d("-----","onRemoteInvitationCanceled")
             cancelNotify()
             launch({
             events?.onRemoteInvitationCanceled(var1)
@@ -594,6 +595,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
         }
 
         override fun onRemoteInvitationFailure(var1: RemoteInvitation?, var2: Int) {
+            Log.d("-----","onRemoteInvitationFailure")
             cancelNotify()
             launch({
             events?.onRemoteInvitationFailure(var1, var2)
@@ -613,14 +615,17 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
     }
 
     private fun startCallTime() {
-        callTimeInterval.reset()
-        callTimeInterval.subscribe {
-            callTime.value = it
+        if (!isStartTime) {
+            callTimeInterval.reset()
+            callTimeInterval.subscribe {
+                callTime.value = it
+            }
+            callTimeInterval.finish {
+                Log.d("通话 结束", it.toString())
+            }
+            callTimeInterval.start()
+            isStartTime = true
         }
-        callTimeInterval.finish {
-            Log.d("通话 结束", it.toString())
-        }
-        callTimeInterval.start()
     }
 
     private inner class ChannelEvent : RtmChannelListener {
@@ -700,6 +705,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
     fun releaseCall(){
         playHangupMusic()
         callTimeInterval.stop()
+        isStartTime = false
         curCallModel?.let {
             aruiCallingListener?.onCallEnd(it.users.toTypedArray(),it.type,it.role,callTime.value!!)
         }

@@ -100,7 +100,7 @@ class ARUICallingImpl constructor(context: Context, private val anotherUserLogin
         type,
         ARUICalling.Role.CALL,
         ((Math.random() * 9 + 1) * 100000000L).toLong().toString(),
-        true,
+        users.size>1,
         ""
       )
     )

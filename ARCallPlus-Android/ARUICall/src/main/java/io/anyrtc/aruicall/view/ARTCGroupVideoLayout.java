@@ -1,6 +1,7 @@
 package io.anyrtc.aruicall.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -120,16 +121,19 @@ public class ARTCGroupVideoLayout extends RelativeLayout {
 
     private void initView() {
         LayoutInflater.from(getContext()).inflate(R.layout.aruicalling_group_videocall_item_user_layout, this, true);
-        if (type == ARUICalling.Type.VIDEO) {
-            videoView = RtcEngine.CreateRendererView(getContext());
-            addView(videoView, 0, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        }
         mProgressAudio = findViewById(R.id.progress_bar_audio);
         mImageHead = findViewById(R.id.img_head);
         mTextUserName = findViewById(R.id.tv_name);
         mImageAudioInput = findViewById(R.id.iv_audio_input);
         mImgLoading = (ImageView) findViewById(R.id.img_loading);
         ImageLoader.loadGifImage(getContext(), mImgLoading, R.drawable.aruicalling__loading);
+        if (type == ARUICalling.Type.VIDEO) {
+            videoView = RtcEngine.CreateRendererView(getContext());
+            addView(videoView, 0, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            mTextUserName.setTextColor(Color.WHITE);
+        }else {
+            mTextUserName.setTextColor(getContext().getResources().getColor(R.color.calling_color_second));
+        }
     }
 
     public void setUserName(String userName) {
@@ -149,7 +153,7 @@ public class ARTCGroupVideoLayout extends RelativeLayout {
 
     public void muteMic(boolean mute) {
         mMuteAudio = mute;
-        mImageAudioInput.setVisibility(mMuteAudio ? GONE : VISIBLE);
+        mImageAudioInput.setVisibility(mMuteAudio ? VISIBLE : GONE);
     }
     public void releaseView(){
         if (videoView!=null){

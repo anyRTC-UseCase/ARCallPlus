@@ -55,7 +55,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="4dp"
-        android:visibility="gone"
-        android:background="@drawable/aruicalling_ic_mutemic_enable" />
+        android:background="@drawable/aruicalling_ic_mutemic_disable" />
 </merge>
 
