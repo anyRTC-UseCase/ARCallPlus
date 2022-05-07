@@ -13,6 +13,7 @@
        >
         <activity android:name=".BaseCallActivity"
             android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|screenSize|orientation"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <service android:name=".utils.ARUICallService"
             android:enabled="true"

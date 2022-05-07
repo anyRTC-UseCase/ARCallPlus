@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
  class CallContent {
-    private int Mode;
+    private int Mode;//1视频0音频
     private boolean Conference;
     private String ChanId;
     private ArrayList<String> UserData;
@@ -13,8 +13,17 @@ import java.util.List;
     private String VidCodec;
     private String AudCodec;
 
+    private int callType = 0;//1监看 2 上报
 
-    public int getMode() {
+     public int getCallType() {
+         return callType;
+     }
+
+     public void setCallType(int callType) {
+         this.callType = callType;
+     }
+
+     public int getMode() {
         return Mode;
     }
 

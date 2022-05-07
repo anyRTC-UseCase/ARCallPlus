@@ -41,7 +41,7 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
     var aruiCallingListener:ARUICalling.ARUICallingListener? = null
 
     val callTime = MutableLiveData<Long>(0)
-    private val callTimeInterval by lazy { Interval(-1, 1, TimeUnit.SECONDS, 1) }//收到对方异常离开 倒计10秒 10秒内对方还未恢复 则退出
+    private val callTimeInterval by lazy { Interval(-1, 1, TimeUnit.SECONDS, 10) }//收到对方异常离开 倒计10秒 10秒内对方还未恢复 则退出
     private var isStartTime = false
     init {
         ProcessLifecycleOwner.get().lifecycle.addObserver(this)
