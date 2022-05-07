@@ -29,8 +29,8 @@
 
         <activity
             android:name=".views.HomeActivity"
-            android:exported="false"
-            android:launchMode="singleTask" />
+            android:configChanges="screenSize|orientation"
+            android:exported="false" />
 
         <receiver android:name=".services.MessageReceiver">
             <intent-filter>
