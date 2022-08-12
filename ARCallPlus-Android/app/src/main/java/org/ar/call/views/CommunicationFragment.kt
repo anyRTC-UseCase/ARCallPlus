@@ -41,7 +41,7 @@ class CommunicationFragment : BaseFragment() {
       searchingBundle.putBoolean("isVideo", isVideo)
       searchingBundle.putString("title", title)
       it.setCustomAnimations(R.anim.slide_in, R.anim.fade_out)
-      it.replace(R.id.fragment_parent, searchingFragment)
+      it.add(R.id.fragment_parent, searchingFragment).hide(this)
       it.addToBackStack(null)
       it.commit()
       (requireActivity() as HomeActivity).hideBottomBar()

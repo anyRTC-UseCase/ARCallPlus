@@ -163,8 +163,20 @@ class HomeActivity : BaseActivity() {
     binding.radioGroup.visibility = View.VISIBLE
   }
 
+  private var showingFragment: Fragment? = null
   private fun replaceFragment(f: Fragment) {
-    supportFragmentManager.beginTransaction().replace(R.id.fragment_parent, f).commit()
+    val sfm = supportFragmentManager
+    if (sfm.fragments.contains(f)) { //added
+      if (showingFragment != null) {
+        sfm.beginTransaction().hide(showingFragment!!).show(f).commitNow()
+      } else {
+        sfm.beginTransaction().show(f).commitNow()
+      }
+    } else {
+      sfm.beginTransaction().add(R.id.fragment_parent, f).commitNow()
+    }
+
+    showingFragment = f
   }
 
   private fun showLoading() {
