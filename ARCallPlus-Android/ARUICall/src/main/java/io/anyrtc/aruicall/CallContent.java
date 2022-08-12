@@ -12,15 +12,14 @@ import java.util.List;
     private ArrayList<ARCallUser> UserInfo;
     private String VidCodec;
     private String AudCodec;
-
-    private int callType = 0;//1监看 2 上报
+    private int CallType = 0;//1监看 2 上报
 
      public int getCallType() {
-         return callType;
+         return CallType;
      }
 
      public void setCallType(int callType) {
-         this.callType = callType;
+         CallType = callType;
      }
 
      public int getMode() {
