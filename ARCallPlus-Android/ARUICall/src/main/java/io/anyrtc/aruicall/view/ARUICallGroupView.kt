@@ -85,13 +85,11 @@ open class ARUICallGroupView @JvmOverloads constructor(
                if (role == ARUICalling.Role.CALLED){
                    globalVM.currentRemoteInvitation?.let {
                        globalVM.refuse(it)
-                       globalVM.leaveRtmChannel()
                    }
                }else{
                        localInvitationList.forEach {
                            globalVM.cancel(it)
                        }
-                    globalVM.leaveRtmChannel()
                }
                 finish()
             }
@@ -212,7 +210,6 @@ open class ARUICallGroupView @JvmOverloads constructor(
             btnHangUp.setOnClickListener {
                 globalVM.currentRemoteInvitation?.let {
                     globalVM.refuse(it)
-                    globalVM.leaveRtmChannel()
                 }
                 finish()
             }
@@ -301,7 +298,6 @@ open class ARUICallGroupView @JvmOverloads constructor(
                         globalVM.cancel(it)
                     }
                 }
-                globalVM.leaveRtmChannel()
                 finish()
             }
             btnAudio.setOnClickListener {
@@ -380,6 +376,7 @@ open class ARUICallGroupView @JvmOverloads constructor(
     override fun finish() {
         super.finish()
         rtcVM.onCleared()
+        globalVM.leaveRtmChannel()
         globalVM.releaseCall()
     }
 
@@ -421,7 +418,6 @@ open class ARUICallGroupView @JvmOverloads constructor(
         }
         bindingVideo.arVideoManager.recyclerVideoCallLayout(userId)
             if (callArray!!.size<=0) {
-                    globalVM.leaveRtmChannel()
                     toast("通话已结束")
                     finish()
             }

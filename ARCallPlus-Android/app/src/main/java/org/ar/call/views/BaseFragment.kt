@@ -24,6 +24,7 @@ abstract class BaseFragment : Fragment() {
     initWidget(view)
   }
 
+
   abstract fun layoutId(): Int
   abstract fun initWidget(view: View)
   open fun setStatusBarPadding(view: View, statusBarHeight: Int) {

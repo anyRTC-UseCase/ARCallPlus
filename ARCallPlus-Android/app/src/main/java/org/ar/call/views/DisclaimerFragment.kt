@@ -9,6 +9,7 @@ class DisclaimerFragment : BaseFragment() {
     return R.layout.fragment_disclaimer
   }
 
+
   override fun initWidget(view: View) {
     view.findViewById<View>(R.id.back).setOnClickListener {
       activity?.onBackPressed()
