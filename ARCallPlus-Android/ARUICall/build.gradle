@@ -56,6 +56,6 @@ dependencies {
     api 'com.google.code.gson:gson:2.6.2'
     api 'com.github.getActivity:GsonFactory:5.2'
     api "com.github.bumptech.glide:glide:4.12.0"
-    api 'io.anyrtc:rtm:1.0.2.9'
-    api 'io.anyrtc:rtc:4.2.3.3'
+    api 'io.anyrtc:rtm:1.1.0'
+    api 'io.anyrtc:rtc:4.3.1.1'
 }
