@@ -38,13 +38,13 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField 'String', 'APP_ID', '"ee0ca1b2bf559ea6823698acb0600e62"'
+            buildConfigField 'String', 'APP_ID', '"APPID"'
             buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
             minifyEnabled false
-            buildConfigField 'String', 'APP_ID', '"ee0ca1b2bf559ea6823698acb0600e62"'
+            buildConfigField 'String', 'APP_ID', '"APPID"'
             buildConfigField 'String', 'releaseDate', '"' + releaseTime() + '"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

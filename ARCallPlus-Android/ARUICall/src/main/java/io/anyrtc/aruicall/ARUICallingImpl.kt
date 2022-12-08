@@ -267,6 +267,7 @@ class ARUICallingImpl constructor(context: Context, private val anotherUserLogin
           mContext?.startActivity(
             Intent(mContext, BaseCallActivity::class.java).apply {
               putExtra("isGroup", false)
+              addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             }
           )
           aruiCallingListener?.onCallStart(
