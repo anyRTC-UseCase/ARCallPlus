@@ -393,6 +393,9 @@ class GlobalVM private constructor(): LifecycleObserver, NetworkObserver.Listene
             })
         }
 
+        override fun onTokenWillExpire() {
+        }
+
         override fun onTokenExpired() {
         }
 
