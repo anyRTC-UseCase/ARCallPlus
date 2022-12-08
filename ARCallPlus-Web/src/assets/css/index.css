@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局基础样式 */
+/* input */
+.basics_input {
+  @apply h-10 w-80 placeholder-arcall-gray_2 bg-white rounded px-3 outline-none border border-transparent focus:border-blue-500 text-sm;
+}
+/* button */
+.basics_button {
+  @apply p-2.5 rounded text-sm text-white bg-arcall-blue_1 cursor-pointer;
+}
+.basics_button_disabled {
+  @apply bg-arcall-gray_7;
+}
+/* 滚动条 */
+.basics_scrollbar {
+    @apply relative;
+}
+.basics_scrollbar::-webkit-scrollbar {
+  @apply w-1.5 bg-transparent;
+}
+.basics_scrollbar::-webkit-scrollbar-thumb {
+  @apply absolute bg-white rounded;
+}
