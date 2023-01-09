@@ -290,7 +290,14 @@ export const initCallClient = () => {
     if (oModel == 0) {
       // 多人通话模式下
       store.commit("deleteMultiRemoteInfo", calleeUserInfo.peer);
+      // 无人情况下
+      if (store.state.multiRemoteInfoList.length === 0) {
+        // 主动挂断
+        rejectCall();
+      }
     } else {
+      // 主动挂断
+      rejectCall();
       store.commit("statusClearAll", true);
 
       // 返回首页
