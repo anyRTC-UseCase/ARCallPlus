@@ -41,7 +41,7 @@ class ARNetWorkHepler: NSObject {
             print(response)
             if let jsonData = response.result.value {
                 let headJson = JSON(response.response?.allHeaderFields as Any)
-                if let token = headJson["Ar-Token"].string {
+                if let token = headJson["ar-token"].string {
                     authorization = token
                 }
                 success(JSON(parseJSON: jsonData))
